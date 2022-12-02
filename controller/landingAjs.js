@@ -8,7 +8,7 @@ app.controller("landing", ['$rootScope', '$scope', '$http', function ($rootScope
 $scope.url = window.location.href;
 
 console.log($scope.url)
-
+///
     // $rootScope.errorhttp = function (data, status, headers, config) {
     //     switch (Number(status)) {
     //         case 401:
