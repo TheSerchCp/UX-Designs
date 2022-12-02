@@ -1,6 +1,6 @@
 var app = angular.module("ux",['ngRoute']);
 
-app.controller("landing", ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
+app.controller("login", ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     console.log("Hola")

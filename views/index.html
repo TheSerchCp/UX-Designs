@@ -1,47 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ux">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES | Inicio</title>
-    <link rel="stylesheet" href="/components/css/bootstrap-5.2.3/bootstrap.css">
-    <link rel="stylesheet" href="/components/css/font-Awesome-6.x/css/all.css">
+    <link
+      rel="stylesheet"
+      href="/components/bootstrap-5.2.3/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/components/font-Awesome-6.x/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/components/sweetalert/css/sweetalert2.css"
+    />
 </head>
 
-<body>
-
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand " style="background-color: #e3f2fd;">
-            <div class="container-fluid ">
-                <a class="navbar-brand" href="#">
-                    COURSES
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Store</a>
-                        </li>
-                    </ul>
-
-                </div>
-        </nav>
-    </header>
+<body ng-controller="landing">
+    <header class="sticky-top "">
+        <div  ng-include src="'/views/component/navbar.html'"></div>
+      </header>
 
     <!--Sidebar de red social-->
     <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2  bg-light " >
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
-                    <ul class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
+        <div class="row ">
+            <div class="col-auto col-md-3 col-xl-2  bg-light" >
+                <div class="d-flex flex-column align-items-center align-items-sm-start   ">
+                    <ul class="nav nav-pills flex-column mb-auto mb-sm-auto  align-items-center align-items-sm-start ">
                         <li class="nav-item">
                           <a class="nav-link align-middle px-0 py-5 btn btn-primary" href="#">
                               <i class="fa-brands fa-facebook fa-2x" style="color:#000"></i>
@@ -65,7 +54,7 @@
                 </div>
              
               </div>
-              <div class="col py-3">
+              <div class="col py-1">
                 <div class="row">
                     <!--Carrusel de cursos-->
                     <div class="col-auto col-md-12 col-xl-12 bg-light " >
@@ -178,15 +167,15 @@
                         <div class="d-flex flex-column align-items-center ">
                             <ul class="nav nav-pills flex-row mb-4 mt-4 ">
                                 <li class="nav-item">
-                                    <img src="/components/img/landing/Blender.jpg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:70px;">
+                                    <img src="/components/img/landing/Blender.jpg" class="rounded-circle img-fluid align-middle px-3" style="width:100px;height:75px;">
                                     <span class="d-none d-sm-inline text-dark px-1">Blender</span>
                               </li>
                                 <li class="nav-item">
-                                <img src="/components/img/landing/mysql.jpg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:70px;">
+                                <img src="/components/img/landing/mysql.jpg" class="rounded-circle img-fluid align-middle px-3" style="width: 100px;height:75px;">
                                 <span class="s-1 d-none d-sm-inline text-dark">MySQL</span>
                                 </li>
                                 <li class="nav-item">
-                                    <img src="/components/img/landing/OfficeWord.jpeg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:70px;">
+                                    <img src="/components/img/landing/OfficeWord.jpeg" class="rounded-circle img-fluid align-middle px-3" style="width: 100px;height:75px;">
                                 <span class="s-1 d-none d-sm-inline text-dark">Ms Word</span>
                               
                                 </li>
@@ -245,21 +234,20 @@
         
     </div>
 
-      <!-- Footer -->
-<footer class="text-center sticky-bottom" >
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: #e3f2fd;">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+    <footer class="text-center sticky-bottom">
+        <div  ng-include src="'/views/component/footer.html'"></div>
+      </footer>
     
 
 
     <script src="/components/js/bootstrap-5.2.3/bootstrap.bundle.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/landingAjs.js"></script>
 </body>
 
 </html>
