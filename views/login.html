@@ -35,28 +35,38 @@
             />
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 py-5 px-5 rounded" style="background: #5F97A4;">
-            <form>
+            <form name="form1">
               <!-- Email input -->
-              <div class="form-outline mb-4">
+              <div class="form-group mb-4">
                 <input
                   type="email"
                   id="form3Example3"
                   class="form-control form-control-lg"
                   placeholder="Correo"
+                  minlength="22"
+                  maxlength="50"
+                  name="email"
+                  ng-model="email"
                 />
+                <label ng-show="form1.email.$invalid && form1.email.$dirty" class="form-label" for="form3Example3"
+                style="color:#F00073;">Llena el campo</label>
                 <!-- <label class="form-label" for="form3Example3"
                   >Email address</label
                 > -->
               </div>
 
               <!-- Password input -->
-              <div class="form-outline mb-3">
+              <div class="form-group mb-3">
                 <input
                   type="password"
                   id="form3Example4"
                   class="form-control form-control-lg"
                   placeholder="Contraseña"
+                  name="password"
+                  ng-model = "password"
                 />
+                <label ng-show="form1.password.$invalid && form1.password.$dirty" class="form-label" for="form3Example3"
+                style="color:#F00073;">Llena el campo</label>
                 <!-- <label class="form-label" for="form3Example4">Password</label> -->
               </div>
 
@@ -75,7 +85,7 @@
                   type="button"
                   class="btn btn-lg col-md-11 col-sm-11 col-xs-11 col-xl-11 text-white"
                   style="padding-left: 2.5rem; padding-right: 2.5rem;background:#863C34;"
-                >
+                  ng-disabled="form1.$pristine || form1.$invalid">
                   Iniciar Sesión
                 </button>
               </div>

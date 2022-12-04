@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ux">
 
 <head>
     <meta charset="UTF-8">
@@ -20,45 +20,12 @@
   />
 </head>
 <!-- //// -->
-<body>
+<body ng-controller="productList">
 
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand " style="background-color: #e3f2fd;">
-            <div class="container-fluid ">
-                <a class="navbar-brand" href="#">
-                    COURSES
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse  justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Offers</a>
-                        </li>
-                            <ul class="navbar-nav position-absolute end-0 mx-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <img src="/components/img/landing/Photoshop.jpg" style="width: 30px;height:30px" class="rounded-circle img-fluid ">
-                                </li>
-                            </ul>
-                    </ul>
+    <header class="sticky-top ">
+        <div  ng-include src="'/views/component/navbar.html'"></div>
+      </header>
 
-                </div>
-        </nav>
-    </header>
 
     <!--Sidebar de red social-->
     <div class="container-fluid">
@@ -141,73 +108,19 @@
                 <div class="row">
                     <!--Carrusel de cursos-->
                     <div class="col-auto col-md-12 col-xl-12 bg-light " >
-                        <div class="row justify-content-center pb-5">
-                            <div class="col-sm-4 col-md-4 mt-1 mb-3">
-                                <div class="card text-center h-100" style="width: 18rem;">
-                                    <img src="/components/img/landing/OfficeWord.jpeg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-sm-4 col-md-4 col-lg-4 my-2" ng-repeat="products in listCard">
+                                <div class="card text-center h-100" style="width: 16rem;">
+                                    <img src="{{products.img}}" class="card-img-top rounded mx-auto d-block img-fluid w-100" alt="..." style="height: 150px;">
                                     <div class="card-body align-items-center">
-                                        <h5 class="card-title ">Microsoft Word</h5>
-                                        <p class="card-text">Aprende a mejorar el diseño y orden tus documentos</p>
-                                        <a href="#" class="btn btn-primary">Más</a>
+                                        <h5 class="card-title text-start" ng-bind="products.title"></h5>
+                                        <p class="card-text text-start" ng-bind="products.description"></p>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <a href="#" class="btn btn-primary col-5">Más</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4 col-md-4 mt-1">
-                                <div class="card text-center h-100" style="width: 18rem;">
-                                    <img src="/components/img/landing/Photoshop.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Adobe Photoshop</h5>
-                                        <p class="card-text">Dale un mejor toque a cada una de las imagenes que desees.</p>
-                                        <a href="#" class="btn btn-primary">Más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="card text-center h-100" style="width: 18rem;">
-                                    <img src="/components/img/landing/arduino.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Arduino</h5>
-                                        <p class="card-text">Aprende desde lo básico para automatizar diversas tareas</p>
-                                        <a href="#" class="btn btn-primary">Más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="card text-center h-100" style="width: 18rem;">
-                                    <img src="/components/img/landing/Blender.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Blender</h5>
-                                        <p class="card-text">Modela todas tus ideas en 3D</p>
-                                        <a href="#" class="btn btn-primary">Más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="card text-center h-100" style="width: 18rem;">
-                                    <img src="/components/img/landing/CSS.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">CSS</h5>
-                                        <p class="card-text">Mejora los diseños de tus paginas
-                                            con este lenguaje de estilos
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-md-4">
-                                <div class="card text-center h-100" style="width: 18rem;">
-                                    <img src="/components/img/landing/mysql.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="hola style="height: 150px;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">MySQL</h5>
-                                        <p class="card-text">Deseas guardar informacion de tu app
-                                            con mysql lo puedes hacer
-                                        </p>
-                                        <a href="#" class="btn btn-primary">Más</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                         </div>
                       </div>
@@ -222,29 +135,21 @@
         
     </div>
 
-      <!-- Footer -->
-<footer class="text-center sticky-bottom" >
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: #e3f2fd;">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+    <footer class="text-center sticky-bottom">
+        <div  ng-include src="'/views/component/footer.html'"></div>
+      </footer>
     
 
 
-    <script src="/components/js/bootstrap-5.2.3/bootstrap.bundle.js"></script>
-    <script src="/components/js/bootstrap-5.2.3/bootstrap.bundle.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.bundle.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.bundle.js"></script>
     <script src="/components/angularjs/angular-1.4.6.min.js"></script>
     <script src="/components/angularjs/angular-route.js"></script>
     <script src="/components/angularjs/angular-locale_es-mx.js"></script>
     <script src="/components/jquery/dist/jquery.min.js"></script>
     <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
     <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
-    <script src="/controller/landingAjs.js"></script>
+    <script src="/controller/productListAjs.js"></script>
 </body>
 
 </html>

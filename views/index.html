@@ -21,8 +21,8 @@
 </head>
 
 <body ng-controller="landing">
-    <header class="sticky-top "">
-        <div  ng-include src="'/views/component/navbar.html'"></div>
+    <header class="sticky-top ">
+        <div  ng-include src="'/views/component/navLanding.html'"></div>
       </header>
 
     <!--Sidebar de red social-->
@@ -33,19 +33,19 @@
                     <ul class="nav nav-pills flex-column mb-auto mb-sm-auto  align-items-center align-items-sm-start ">
                         <li class="nav-item">
                           <a class="nav-link align-middle px-0 py-5 btn btn-primary" href="#">
-                              <i class="fa-brands fa-facebook fa-2x" style="color:#000"></i>
+                              <i class="fa-brands fa-facebook fa-4x" style="color:#1877F2"></i>
                               <span class="s-1 d-none d-sm-inline text-dark">Facebook</span>
                           </a>
                       </li>
                         <li class="nav-item">
                           <a class="nav-link align-middle px-0 py-5" href="#">
-                            <i class="fa-brands fa-instagram fa-2x" style="color:#000;"></i>
+                            <i class="fa-brands fa-instagram fa-4x" style="color:#F00073;"></i>
                             <span class="s-1 d-none d-sm-inline text-dark">Instagram</span>
                         </a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link align-middle px-0 py-5" href="#">
-                            <i class="fa-brands fa-twitter fa-2x" style="color:#000"></i>
+                            <i class="fa-brands fa-twitter fa-4x" style="color:#1E0E0E"></i>
                             <span class="s-1 d-none d-sm-inline text-dark">Twitter</span>
                         </a>
                       
@@ -59,91 +59,47 @@
                     <!--Carrusel de cursos-->
                     <div class="col-auto col-md-12 col-xl-12 bg-light " >
                       <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
-                          <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                  class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <!-- <div class="carousel-indicators">
+                              <button type="button" ng-repeat="listCourses in listCard track by $index" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{$index}"
+                                  class="{$index==0:'active':''}" aria-current="true" ></button>
                               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                                   aria-label="Slide 2"></button>
                               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                                   aria-label="Slide 3"></button>
-                          </div>
-                          <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                  <div class="row justify-content-center pb-5">
-                                      <div class="col-sm-4 col-md-4">
+                          </div> -->
+                          <div class="carousel-inner mt-3">
+                              <div class="carousel-item {{::($index === 0 ? 'active' : '')}}"  ng-repeat="listCourses in listCard track by $index" >
+                                  <div class="row justify-content-center pb-5" ng-init="n = $index">
+                                    <div class="col-sm-3 col-md-3 " ng-if="n < listCard.length">
+                                      <div class="card text-center h-100" style="width: 18rem;">
+                                        <h5 class="card-title ">{{listCard[n].title}}</h5>  
+                                        <img src="{{listCard[n].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
+                                          <div class="card-body align-items-center">
+                                              <p class="card-text">{{listCard[n].description}}</p>
+                                              <a href="#" class="btn btn-primary">Más</a>
+                                          </div>
+                                      </div>
+                                  </div>  
+                                    <div class="col-sm-3 col-md-3 " ng-if="(n+1) < listCard.length">
                                           <div class="card text-center h-100" style="width: 18rem;">
-                                              <img src="/components/img/landing/OfficeWord.jpeg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
+                                            <h5 class="card-title ">{{listCard[n+1].title}}</h5>  
+                                            <img src="{{listCard[n+1].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                               <div class="card-body align-items-center">
-                                                  <h5 class="card-title ">Microsoft Word</h5>
-                                                  <p class="card-text">Aprende a mejorar el diseño y orden tus documentos</p>
+                                                  <p class="card-text">{{listCard[n+1].description}}</p>
                                                   <a href="#" class="btn btn-primary">Más</a>
                                               </div>
                                           </div>
                                       </div>
-                                      <div class="col-sm-4 col-md-4">
-                                          <div class="card text-center h-100" style="width: 18rem;">
-                                              <img src="/components/img/landing/Photoshop.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                              <div class="card-body">
-                                                  <h5 class="card-title">Adobe Photoshop</h5>
-                                                  <p class="card-text">Dale un mejor toque a cada una de las imagenes que desees.</p>
-                                                  <a href="#" class="btn btn-primary">Más</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-        
-                              </div>
-                              <div class="carousel-item">
-                                  <div class="row justify-content-center pb-5">
-                                      <div class="col-sm-4 col-md-4">
-                                          <div class="card text-center h-100" style="width: 18rem;">
-                                              <img src="/components/img/landing/arduino.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                              <div class="card-body">
-                                                  <h5 class="card-title">Arduino</h5>
-                                                  <p class="card-text">Aprende desde lo básico para automatizar diversas tareas</p>
-                                                  <a href="#" class="btn btn-primary">Más</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-sm-4 col-md-4">
-                                          <div class="card text-center h-100" style="width: 18rem;">
-                                              <img src="/components/img/landing/Blender.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                              <div class="card-body">
-                                                  <h5 class="card-title">Blender</h5>
-                                                  <p class="card-text">Modela todas tus ideas en 3D</p>
-                                                  <a href="#" class="btn btn-primary">Más</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-        
-                              </div>
-                              <div class="carousel-item">
-                                  <div class="row justify-content-center pb-5">
-                                      <div class="col-sm-4 col-md-4">
-                                          <div class="card text-center h-100" style="width: 18rem;">
-                                              <img src="/components/img/landing/CSS.png" class="card-img-top rounded mx-auto d-block img-fluid" alt="..." style="height: 150px;">
-                                              <div class="card-body">
-                                                  <h5 class="card-title">CSS</h5>
-                                                  <p class="card-text">Mejora los diseños de tus paginas
-                                                      con este lenguaje de estilos
-                                                  </p>
-                                                  <a href="#" class="btn btn-primary">Más</a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-sm-4 col-md-4">
-                                          <div class="card text-center h-100" style="width: 18rem;">
-                                              <img src="/components/img/landing/mysql.jpg" class="card-img-top rounded mx-auto d-block img-fluid" alt="hola style="height: 150px;">
-                                              <div class="card-body">
-                                                  <h5 class="card-title">MySQL</h5>
-                                                  <p class="card-text">Deseas guardar informacion de tu app
-                                                      con mysql lo puedes hacer
-                                                  </p>
-                                                  <a href="#" class="btn btn-primary">Más</a>
-                                              </div>
-                                          </div>
-                                      </div>
+                                      <div class="col-sm-3 col-md-3" ng-if="(n+2) < listCard.length">
+                                        <div class="card text-center h-100" style="width: 18rem;">
+                                          <h5 class="card-title ">{{listCard[n+2].title}}</h5>  
+                                          <img src="{{listCard[n+2].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
+                                            <div class="card-body align-items-center">
+                                                <p class="card-text">{{listCard[n+2].description}}</p>
+                                                <a href="" class="btn btn-primary">Más</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                   </div>
         
                               </div>
@@ -165,17 +121,17 @@
                       <div class="col-auto col-md-12 col-xl-12 text-center">
                         <h3 class="mt-4 ">Mas Populares</h3>
                         <div class="d-flex flex-column align-items-center ">
-                            <ul class="nav nav-pills flex-row mb-4 mt-4 ">
-                                <li class="nav-item">
-                                    <img src="/components/img/landing/Blender.jpg" class="rounded-circle img-fluid align-middle px-3" style="width:100px;height:75px;">
+                            <ul class="nav nav-pills flex-row mb-4 mt-4 " >
+                                <li class="nav-item" >
+                                    <img src="/components/img/landing/Blender.jpg" class="rounded-circle img-fluid align-middle px-3" style="width:120px;height:95px;">
                                     <span class="d-none d-sm-inline text-dark px-1">Blender</span>
                               </li>
                                 <li class="nav-item">
-                                <img src="/components/img/landing/mysql.jpg" class="rounded-circle img-fluid align-middle px-3" style="width: 100px;height:75px;">
+                                <img src="/components/img/landing/mysql.jpg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:95px;">
                                 <span class="s-1 d-none d-sm-inline text-dark">MySQL</span>
                                 </li>
                                 <li class="nav-item">
-                                    <img src="/components/img/landing/OfficeWord.jpeg" class="rounded-circle img-fluid align-middle px-3" style="width: 100px;height:75px;">
+                                    <img src="/components/img/landing/OfficeWord.jpeg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:95px;">
                                 <span class="s-1 d-none d-sm-inline text-dark">Ms Word</span>
                               
                                 </li>
@@ -185,29 +141,32 @@
 
         <!-- Section: Form -->
         <section class="col-auto col-md-12 col-xl-12 bg-light pt-5">
-          <form action="">
+          <form  name="form1" novalidate>
             <!--Grid row-->
             <div class="row row-cols-md-2 d-flex justify-content-center">
         
               <!--Grid column-->
               <div class="col-md-4 col-8">
-                <div class="form-outline ">
-                  <input type="text" id="form5Example2" class="form-control" />
-                  <label class="form-label" for="form5Example2">Usuario</label>
+                <div class="form-group" >
+                  <input type="text" id="form5Example2" name="user"ng-model="user" class="form-control" minlength="4" maxlength="15" />
+                  <label ng-show="form1.user.$valid && form1.$valid || form1.axo.$valid && form1.$dirty" class="form-label" for="form5Example2">Usuario</label>
+                  <label ng-show="form1.user.$invalid && form1.user.$dirty" class="form-label" for="form5Example2" style="color:#F00073;">Llena el campo</label>
                 </div>
               </div>
               <div class="col-md-5 col-8">
                   <!-- Email input -->
-                  <div class="form-outline ">
-                    <textarea  id="form5Example2" class="form-control"></textarea>
+                  <div class="form-group" >
+                    <textarea  id="form5Example2" class="form-control" name="coments" ng-model="coments" minlength="5" maxlength="500"></textarea>
                     <label class="form-label" for="form5Example2">Comentarios</label>
+                    
                   </div>
                 </div>
                 <div class="col-md-4 col-8">
                   <!-- Email input -->
-                  <div class="form-outline ">
-                    <input type="email" id="form5Example2" class="form-control" />
-                    <label class="form-label" for="form5Example2">Correo</label>
+                  <div class="form-group">
+                    <input type="email" id="form5Example2" class="form-control" name="email" ng-model="email" minlength="20" maxlength="35"/>
+                    <label ng-show="form1.email.$valid && form1.$valid || form1.email.$valid && form1.$dirty" class="form-label" for="form5Example2">Correo</label>
+                    <label ng-show="form1.email.$invalid && form1.email.$dirty" class="form-label" for="form5Example2" style="color:#F00073;">Llena el campo</label>
                   </div>
                 </div>
               <!--Grid column-->
@@ -216,7 +175,7 @@
               <div class="col-md-5 col-8">
         
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary mb-4">
+                <button type="button" class="btn btn-primary mb-4" ng-disabled="form1.user.$invalid && form1.user.$dirty ||  form1.email.$invalid && form1.email.$dirty || form1.$invalid || form1.$pristine">
                   Subscribe
                 </button>
               </div>
@@ -238,14 +197,13 @@
         <div  ng-include src="'/views/component/footer.html'"></div>
       </footer>
     
-
-
-    <script src="/components/js/bootstrap-5.2.3/bootstrap.bundle.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
     <script src="/components/angularjs/angular-1.4.6.min.js"></script>
     <script src="/components/angularjs/angular-route.js"></script>
     <script src="/components/angularjs/angular-locale_es-mx.js"></script>
-    <script src="/components/jquery/dist/jquery.min.js"></script>
-    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
     <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
     <script src="/controller/landingAjs.js"></script>
 </body>
