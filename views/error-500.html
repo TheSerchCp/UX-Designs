@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COURSES | Login</title>
+    <link
+      rel="stylesheet"
+      href="/components/bootstrap-5.2.3/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/components/font-Awesome-6.x/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/components/sweetalert/css/sweetalert2.css"
+    />
+  </head>
+
+  <body ng-controller="login">
+    <header class="sticky-top ">
+      <div  ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+    
+   <div style="height: 650px;background-image: url('/components/img/errors/error-500.png');
+   background-repeat: no-repeat;background-size:cover;background-color: aqua;text-align: center;">
+<h4 style="color: #fff;padding-top: 60px;text-align: center;font-size: 27px;">Hay un error en el servidor,
+   este problema es nuestro, tu no tienes que hacer nada para resolverlo.</h4>
+   </div>
+
+    <footer class="text-center sticky-bottom">
+      <div  ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/loginAjs.js"></script>
+  </body>
+</html>
