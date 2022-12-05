@@ -20,7 +20,7 @@
     />
 </head>
 
-<body ng-controller="landing">
+<body ng-controller="landing" class="bg-light">
     <header class="sticky-top ">
         <div  ng-include src="'/views/component/navLanding.html'"></div>
       </header>
@@ -71,32 +71,32 @@
                               <div class="carousel-item {{::($index === 0 ? 'active' : '')}}"  ng-repeat="listCourses in listCard track by $index" >
                                   <div class="row justify-content-center pb-5" ng-init="n = $index">
                                     <div class="col-sm-3 col-md-3 " ng-if="n < listCard.length">
-                                      <div class="card text-center h-100" style="width: 18rem;">
-                                        <h5 class="card-title ">{{listCard[n].title}}</h5>  
+                                      <div class="card text-center h-100 text-white" style="width: 18rem;background:#189EBB;">
+                                        <h5 class="card-title">{{listCard[n].title}}</h5>  
                                         <img src="{{listCard[n].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                           <div class="card-body align-items-center">
                                               <p class="card-text">{{listCard[n].description}}</p>
-                                              <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn btn-primary">Más</a>
+                                              <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background: #863C34;">Más</a>
                                           </div>
                                       </div>
                                   </div>  
                                     <div class="col-sm-3 col-md-3 " ng-if="(n+1) < listCard.length">
-                                          <div class="card text-center h-100" style="width: 18rem;">
+                                          <div class="card text-center h-100 text-white" style="width: 18rem;background:#189EBB;">
                                             <h5 class="card-title ">{{listCard[n+1].title}}</h5>  
                                             <img src="{{listCard[n+1].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                               <div class="card-body align-items-center">
                                                   <p class="card-text">{{listCard[n+1].description}}</p>
-                                                  <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn btn-primary">Más</a>
+                                                  <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background: #863C34;">Más</a>
                                               </div>
                                           </div>
                                       </div>
                                       <div class="col-sm-3 col-md-3" ng-if="(n+2) < listCard.length">
-                                        <div class="card text-center h-100" style="width: 18rem;">
+                                        <div class="card text-center h-100 text-white" style="width: 18rem;background:#189EBB;">
                                           <h5 class="card-title ">{{listCard[n+2].title}}</h5>  
                                           <img src="{{listCard[n+2].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                             <div class="card-body align-items-center">
                                                 <p class="card-text">{{listCard[n+2].description}}</p>
-                                                <a href="" onclick="window.location.pathname = '/views/productList.html'" class="btn btn-primary">Más</a>
+                                                <a href="" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background:#863C34;">Más</a>
                                             </div>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@
               <div class="col-md-5 col-8">
         
                 <!-- Submit button -->
-                <button type="button" class="btn btn-primary mb-4" ng-disabled="form1.user.$invalid && form1.user.$dirty ||  form1.email.$invalid && form1.email.$dirty || form1.$invalid || form1.$pristine">
+                <button type="button" class="btn mb-4 text-white" style="background: #863C34 ;" ng-disabled="form1.user.$invalid && form1.user.$dirty ||  form1.email.$invalid && form1.email.$dirty || form1.$invalid || form1.$pristine">
                   Subscribe
                 </button>
               </div>
