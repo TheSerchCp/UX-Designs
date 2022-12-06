@@ -9,14 +9,26 @@
 
   width: 297px;
   height: 78px;
-  left: 13px;
+  left: 15px;
   
   background: #00655C;
   border: 3px solid #000000;
   border-radius: 15px;
 }
-.dashboard-img{
- 
+.boxxd{
+  box-sizing: border-box;
+
+  width: 297px;
+  height: 78px;
+  left: 13px;
+  
+  background: #ffffff;
+}
+.txt-nrm{
+  padding-top: 7%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 24px;
 }
 .txt-dash{
 
