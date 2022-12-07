@@ -6,33 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES | List</title>
-    <link
-    rel="stylesheet"
-    href="/components/bootstrap-5.2.3/bootstrap.css"
-  />
-  <link
-    rel="stylesheet"
-    href="/components/font-Awesome-6.x/css/all.css"
-  />
-  <link
-    rel="stylesheet"
-    href="/components/sweetalert/css/sweetalert2.css"
-  />
+    <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
+    <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
+    <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
 </head>
 <!-- //// -->
+
 <body ng-controller="productList">
 
     <header class="sticky-top ">
-        <div  ng-include src="'/views/component/navbar.html'"></div>
-      </header>
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
 
 
     <!--Sidebar de red social-->
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 bg-light " >
+            <div class="col-auto col-md-3 col-xl-2 bg-light ">
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
-                    <ul class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
+                    <ul
+                        class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
                         <li class="nav-item ">
                             <div class="ms-2 me-auto text-center">
                                 <div class="fw-bold">Programación</div>
@@ -51,29 +44,29 @@
                                     </a>
                                 </div>
                             </div>
-                      </li>
+                        </li>
                         <li class="nav-item">
-                         <div class="ms-2 me-auto text-end">
-                            <div class="fw-bold">Ofimática</div>
-                            <div class="text-start py-3">
-                                <a class="nav-link align-middle px-0 py-1" href="#">
-                                    <input type="checkbox" class="form-check-input">
-                                    <span class="s-1 d-none d-sm-inline text-dark">MS Office</span>
-                                </a>
-                                <a class="nav-link align-middle px-0 py-1" href="#">
-                                    <input type="checkbox" class="form-check-input">
-                                    <span class="s-1 d-none d-sm-inline text-dark">LibreOffice</span>
-                                </a>
-                                <a class="nav-link align-middle px-0 py-1" href="#">
-                                    <input type="checkbox" class="form-check-input">
-                                    <span class="s-1 d-none d-sm-inline text-dark">WPS Office</span>
-                                </a>
-                                <a class="nav-link align-middle px-0 py-1" href="#">
-                                    <input type="checkbox" class="form-check-input">
-                                    <span class="s-1 d-none d-sm-inline text-dark">Only Office</span>
-                                </a>
+                            <div class="ms-2 me-auto text-end">
+                                <div class="fw-bold">Ofimática</div>
+                                <div class="text-start py-3">
+                                    <a class="nav-link align-middle px-0 py-1" href="#">
+                                        <input type="checkbox" class="form-check-input">
+                                        <span class="s-1 d-none d-sm-inline text-dark">MS Office</span>
+                                    </a>
+                                    <a class="nav-link align-middle px-0 py-1" href="#">
+                                        <input type="checkbox" class="form-check-input">
+                                        <span class="s-1 d-none d-sm-inline text-dark">LibreOffice</span>
+                                    </a>
+                                    <a class="nav-link align-middle px-0 py-1" href="#">
+                                        <input type="checkbox" class="form-check-input">
+                                        <span class="s-1 d-none d-sm-inline text-dark">WPS Office</span>
+                                    </a>
+                                    <a class="nav-link align-middle px-0 py-1" href="#">
+                                        <input type="checkbox" class="form-check-input">
+                                        <span class="s-1 d-none d-sm-inline text-dark">Only Office</span>
+                                    </a>
+                                </div>
                             </div>
-                         </div>
                         </li>
                         <li class="nav-item">
                             <div class="ms-2 me.auto text-center">
@@ -93,21 +86,20 @@
                                     </a>
                                 </div>
                             </div>
-                          
-                      
                         </li>
-                      </ul>
+                    </ul>
                 </div>
-             
-              </div>
-              <div class="col py-3">
+            </div>
+            <div class="col py-3">
                 <div class="row">
                     <!--Carrusel de cursos-->
-                    <div class="col-auto col-md-12 col-xl-12 bg-light " >
+                    <div class="col-auto col-md-12 col-xl-12 bg-light ">
                         <div class="row justify-content-center pb-3">
                             <div class="col-sm-4 col-md-4 col-lg-4 my-2" ng-repeat="products in listCard">
                                 <div class="card text-center h-100 text-white" style="width: 16rem;background: #189EBB">
-                                    <img src="{{products.img}}" class="card-img-top rounded mx-auto d-block img-fluid w-100" alt="..." style="height: 150px;">
+                                    <img src="{{products.img}}"
+                                        class="card-img-top rounded mx-auto d-block img-fluid w-100" alt="..."
+                                        style="height: 150px;">
                                     <div class="card-body align-items-center">
                                         <h5 class="card-title text-start" ng-bind="products.title"></h5>
                                         <p class="card-text text-start" ng-bind="products.description"></p>
@@ -118,23 +110,19 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
-                      </div>
-
-
-        <!-- Grid container -->
-              </div>
-              </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        
-        
+
+
     </div>
 
     <footer class="text-center sticky-bottom">
-        <div  ng-include src="'/views/component/footer.html'"></div>
-      </footer>
-    
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
 
     <script src="/components/popper.min.js"></script>
     <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>

@@ -3,7 +3,25 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
+ .barra-lateral{
+  width: 950px;
+  height: 0px;
+  left: 320px;
+  top: 74px;
 
+  border: 2px solid #000000;
+  transform: rotate(90deg);
+ }
+.box-blue{
+  width: 258px;
+  height: 100px;
+  left: 19px;
+  top: 743px;
+
+  background: #189EBB;
+  border: 3px solid #000000;
+  border-radius: 18px;
+}
 .box{
   box-sizing: border-box;
 
@@ -29,6 +47,13 @@
   font-family: 'Inter';
   font-style: normal;
   font-size: 24px;
+}
+.txt-box{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
 }
 .txt-dash{
 
