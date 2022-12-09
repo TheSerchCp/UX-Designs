@@ -3,6 +3,20 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
+ .box-dash{
+  width: 320px;
+  height: 80px;
+  left: 340px;
+  top: 248px;
+
+  background: #189EBB;
+  border: 3px solid #000000;
+  border-radius: 18px;
+ }
+ .container-sm{
+  width: 77.22%;
+  margin-left: 90px;
+ }
  .barra-lateral{
   width: 950px;
   height: 0px;
