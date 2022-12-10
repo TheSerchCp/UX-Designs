@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COURSES | Register</title>
+    <ng-include src="'/views/component/head.html'"></ng-include>
+  </head>
+
+  <body ng-controller="login">
+    <header class="sticky-top">
+      <div  ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+    
+    <section>
+      <div class="container">
+        <div class="row d-flex my-0">
+          <div class="col-md-12 rounded my-5" style="background: #80A09D;">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-xl-6">
+                <img
+                src="/components/img/logRegister/keyboard-typing-backward.jpg"
+                class="img-fluid rounded"
+                style="margin-left: -1rem;"
+                alt="Sample image"
+              />
+              </div>
+
+              <div class="col-md-12 col-lg-12 col-xl-4 offset-xl-1 py-5 px-5 mt-5 rounded" style="background: #80A09D;">
+                <h1 id="register" class="fw-bold fa-2x text-center mb-4">Crear tu cuenta</h1>
+                <div class="stepwizard">
+                    <div class="stepwizard-row d-flex justify-content-between setup-panel">
+                      <div class="step´wizard-step">
+                          <a href="#step-1" type="button" id="step1" class="btn  btn-circle text-white" style="background:#00413B ;">1</a>
+                          <p>Paso 1</p>
+                        </div>
+                        <div class="step´wizard-step">
+                          <a href="#step-2" type="button" id="step2" class="btn  btn-circle text-white" style="background:#266B66;">2</a>
+                          <p>Paso 2</p>
+                        </div>
+                        <div class="step´wizard-step">
+                          <a href="#step-3" type="button" id="step3" class="btn btn-circle text-white" style="background:#266B66;">3</a>
+                          <p>Paso </p>
+                        </div>
+                    </div>
+                    
+                    <form name="form2" novalidate>
+                      <div class="row setup-content" id="step-1" ng-show="showSt1">
+                         <div class="col-md-12">
+                          <div class="form-group form-floating mb-4">
+                            <input
+                              type="text"
+                              class="form-control form-control-lg"
+                              ng-class="{
+                                '': form2.name.$untouched || form2.name.$touched,
+                                'is-valid' : form2.name.$valid,
+                                'is-invalid' : form2.name.$invalid && form2.name.$dirty}"
+                              id="floatinginput"
+                              name = "name"
+                              ng-model ="name"
+                              maxlength="25" 
+                              minlength="6"
+                            />
+                            <label for="floatinginput" class="text-black-50" ng-hide="form2.name.$invalid && form2.name.$dirty">Nombre completo</label>
+                            <label ng-show="form2.name.$invalid && form2.name.$dirty" class="form-label" for="floatinginput"
+                            style="color:#F00073;">Llena el campo</label> 
+                            <button type="button" class="btn text-white mt-2" ng-click="step2()" 
+                            style="background:#266B66;"
+                            ng-disabled="form2.name.$invalid && form2.name.$dirty || form2.name.$pristine && !form2.name.$error.minlenght">Siguiente</button>  
+                          </div>
+                          
+                         </div> 
+                         
+                      </div>
+                      <div class="row setup-content" id="step-2" ng-show="showSt2">
+                          <div class="col-md-12">
+                            <div class="form-group form-floating mb-4">
+                              <input
+                                type="email"
+                                id="form3Example4"
+                                class="form-control form-control-lg"
+                                ng-class="{
+                                  '': form2.email.$untouched || form2.email.$touched,
+                                  'is-valid' : form2.email.$valid && form2.$valid || form2.email.$valid && form2.$dirty,
+                                  'is-invalid' : form2.email.$invalid && form2.email.$dirty}"
+                                placeholder="Correo"
+                                name = "email"
+                                ng-model="email"
+                                id="floatinginput"
+                                minlength="22"
+                                maxlength="50"
+                              />
+                              <!-- ng-hide="form2.email.$invalid && form2.email.$dirty" -->
+                              <label for="floatinginput" class="text-black-50" >Correo</label>
+                            
+                              <button type="button" class="btn text-white mt-2" ng-click="step1()" style="background:#266B66;">Regresar</button>  
+                              <button type="button" class="btn text-white mt-2" ng-click="step3()" 
+                              style="background:#266B66;"
+                              ng-disabled="form2.email.$invalid && form2.email.$dirty || form2.email.$pristine">Siguiente</button>  
+                              <label ng-show="form2.email.$invalid && form2.email.$dirty" class="form-label" 
+                              style="color:#F00073;">Correo Invalido</label>
+                              <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                            </div>
+                          
+                          </div>
+                      </div>
+                      <div class="row setup-content" id="step-3" ng-show="showSt3">
+                        <div class="col-md-12">
+                          <div class="form-group form-floating mb-4">
+                            <input
+                              type="password"
+                              id="form3Example4"
+                              class="form-control form-control-lg"
+                              ng-class="{
+                                '': form2.password.$untouched || form2.password.$touched,
+                                'is-valid' : form2.password.$valid && form2.$valid || form2.password.$valid && form2.$dirty,
+                                'is-invalid' : form2.password.$invalid && form2.password.$dirty}"
+                              placeholder="Contraseña"
+                              id="floatinginput"
+                              name = "password"
+                              ng-model = "password"
+                              minlength="3"
+                              maxlength="12"
+                            />
+                            <label for="floatinginput" class="text-black-50" ng-hide="form2.password.$invalid && form2.password.$dirty">Contraseña</label>
+                            <label ng-show="form2.password.$invalid && form2.password.$dirty" class="form-label" for="floatinginput"
+                            style="color:#F00073;">Llena el campo</label>
+                            <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                          </div>
+                          <div class="form-group form-floating mb-4">
+                            <input
+                              type="password"
+                              id="form3Example4"
+                              class="form-control form-control-lg"
+                              ng-class="{
+                                '': form2.confirmPassword.$untouched || form2.confirmPassword.$touched,
+                                'is-valid' : form2.confirmPassword.$valid && form2.$valid || form2.confirmPassword.$valid && form2.$dirty,
+                                'is-invalid' : form2.confirmPassword.$invalid && form2.confirmPassword.$dirty}"
+                              placeholder="Confirmar contraseña"
+                              id="floatinginput"
+                              name = "confirmPassword"
+                              ng-model = "confirmPassword"
+                              minlength="3"
+                              maxlength="12"
+                            />
+                            <label for="floatinginput" class="text-black-50" ng-hide="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty">Confirmar contraseña</label>
+                            <label ng-show="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty" class="form-label" for="floatinginput"
+                            style="color:#F00073;">Llena el campo</label>
+                            <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                          </div>
+                          <button type="button" class="btn text-white" ng-click="step2()" style="background:#266B66;">Regresar</button>  
+                          <button
+                          type="button"
+                          class="btn col-md-8 col-sm-8 col-xs-8 col-xl-8 text-white"
+                          style="padding-left: 2.5rem; padding-right: 2.5rem;background:#266B66;"
+                         ng-disabled = "form2.$pristine || form2.$invalid"
+                         onclick="window.location.pathname = '/views/productList.html'" >
+                          Registrarse
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                  <button class=" btn text-body mt-4 " 
+                  for="form2Example3" 
+                  onclick="window.location.pathname = '/views/login.html'" 
+                  style="background:#00413B;color:#fff !important ;"
+                  >
+                    Iniciar Sesión
+                  </button>
+                </div>
+                </form>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center sticky-bottom">
+      <div  ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/loginAjs.js"></script>
+  </body>
+</html>

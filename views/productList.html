@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES | List</title>
-    <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
-    <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
-    <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
+    <ng-include src="'/views/component/head.html'"></ng-include>
+   
 </head>
 <!-- //// -->
 
@@ -96,7 +95,7 @@
                     <div class="col-auto col-md-12 col-xl-12 bg-light ">
                         <div class="row justify-content-center pb-3">
                             <div class="col-sm-4 col-md-4 col-lg-4 my-2" ng-repeat="products in listCard">
-                                <div class="card text-center h-100 text-white" style="width: 16rem;background: #189EBB">
+                                <div class="card text-center h-100 text-white" style="width: 16rem;background: #266B66;">
                                     <img src="{{products.img}}"
                                         class="card-img-top rounded mx-auto d-block img-fluid w-100" alt="..."
                                         style="height: 150px;">
@@ -105,7 +104,7 @@
                                         <p class="card-text text-start" ng-bind="products.description"></p>
                                     </div>
                                     <div class="card-footer ">
-                                        <a href="#" class="btn col-5 text-white" style="background:#863C34;">Más</a>
+                                        <a href="#" onclick="window.location.pathname = '/views/pricing.html'" class="btn col-5 text-white" style="background:#00413B;">Más</a>
                                     </div>
                                 </div>
                             </div>
