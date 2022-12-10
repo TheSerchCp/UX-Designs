@@ -25,9 +25,14 @@
     </header>
     
    <div style="height: 650px;background-image: url('/components/img/errors/error-401.png');
-   background-repeat: no-repeat;background-size:cover;background-color: aqua;text-align: right;">
-<h4 style="color: #fff;padding-top: 60px;text-align: center;font-size: 40px;text-align: right;padding-right: 30px;">Parece que la pagina que <br>ingresaste no existe.</h4>
-   </div>
+   background-repeat: no-repeat;background-size:cover;text-align: right;position: relative;">
+<h4 style="color: #fff;padding-top: 60px;text-align: center;font-size: 40px;text-align: right;padding-right: 30px;">Parece que la página que <br>ingresaste no existe.</h4>
+<div style="bottom:20px;
+height:50px;left:5%;position:absolute;margin-bottom: 20px;">
+  <button type="button" class="btn" style="background-color: #189EBB;font-size: 22px;padding-left: 30px;padding-right: 30px;color: #000;">Volver</button>
+
+</div>
+</div>
 
     <footer class="text-center sticky-bottom">
       <div  ng-include src="'/views/component/footer.html'"></div>
