@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <ng-include src="'/views/component/head.html'"></ng-include>
+
+</head>
+<!-- //// -->
+
+<body ng-controller="productList">
+
+    <header class="sticky-top ">
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+
+
+    <!--BOTONES DEL DASHBOARD-->
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2  ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
+                    <ul
+                        class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
+                        <div class="nav-item ">
+                            <li class="box">
+                                <div class="ms-3 txt-dash d-flex flex-row justify-content-around ">
+                                    <p>Dashboard</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/dashboard.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Vista General</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/eye.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Chat</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/devicemessage.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Equipos</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/profile2user.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="ms-2 me.auto ">
+                                    <h1>Atajos</h1>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Tareas</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/tasksquare.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Reportes</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/receiptedit.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Ajustes</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/setting3.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="box-blue">
+                                <div class="ms-3 txt-box text-center ">
+                                    <p>Espacio Usado</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/barra.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="box-blue">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <div>
+                                        <img src="../components/img/dashboard/user.png">
+                                    </div>
+                                    <p>Junior</p>
+                                </div>
+                            </li>
+                            <br>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="container-sm text-center">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h1>Bienvenido</h1>
+                    </div>
+
+                    <div class="col-md-4 offset-md-6">
+                        <br>
+                        <input type="email" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+                <div class="w-100"></div>
+
+                <div class="col-md-3 text-start">
+                    <h5>Septiembre 14 de 2021</h5>
+                </div>
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn  btn-lg float-left text-white" onclick="window.location.pathname = '/views/dashboard.html'" style="background:#266B66;">Dashboard</button>
+                    <button type="button" class="btn  btn-lg text-white" onclick="window.location.pathname = '/views/dash-register.html'" style="background:#266B66;">Registrar cursos</button>
+                </div>
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn  btn-lg text-white "style="background:#266B66;">Agregar</button>
+                </div>
+                <br>
+                <table class="table table-borderless table-responsive rounded">
+                    <thead class="table text-white" style="background:#00413B;">
+                        <tr >
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Costo</th>
+                        </tr>
+                    </thead>
+                    <tbody class="fw-semibold" style="background:#5b9c99;">
+                        <tr>
+                            <td>HTML5</td>
+                            <td>Maquetado de paginas web</td>
+                            <td>5</td>
+                            <td>$50</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Node.JS</td>
+                            <td>Creacion de servicios REST</td>
+                            <td>12</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>TailwindCSS</td>
+                            <td>Diseños de sitios web a tu manera</td>
+                            <td>10</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                      
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <footer class="text-center sticky-bottom">
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/productListAjs.js"></script>
+    <script src="https://kit.fontawesome.com/82a32396fc.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

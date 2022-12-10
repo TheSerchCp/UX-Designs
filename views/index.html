@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES | Inicio</title>
+<<<<<<< Updated upstream
     <link
       rel="stylesheet"
       href="/components/bootstrap-5.2.3/bootstrap.css"
@@ -18,6 +19,9 @@
       rel="stylesheet"
       href="/components/sweetalert/css/sweetalert2.css"
     />
+=======
+    <ng-include src="'/views/component/head.html'"></ng-include>
+>>>>>>> Stashed changes
 </head>
 
 <body ng-controller="landing" class="bg-light">
@@ -45,7 +49,11 @@
                         </li>
                         <li class="nav-item">
                           <a class="nav-link align-middle px-0 py-5" href="#">
+<<<<<<< Updated upstream
                             <i class="fa-brands fa-twitter fa-4x" style="color:#1E0E0E"></i>
+=======
+                            <i class="fa-brands fa-twitter fa-4x" style="color:#3c89ee"></i>
+>>>>>>> Stashed changes
                             <span class="s-1 d-none d-sm-inline text-dark">Twitter</span>
                         </a>
                       
@@ -59,6 +67,7 @@
                     <!--Carrusel de cursos-->
                     <div class="col-auto col-md-12 col-xl-12 bg-light " >
                       <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+<<<<<<< Updated upstream
                           <!-- <div class="carousel-indicators">
                               <button type="button" ng-repeat="listCourses in listCard track by $index" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{$index}"
                                   class="{$index==0:'active':''}" aria-current="true" ></button>
@@ -67,36 +76,62 @@
                               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                                   aria-label="Slide 3"></button>
                           </div> -->
+=======
+>>>>>>> Stashed changes
                           <div class="carousel-inner mt-3">
                               <div class="carousel-item {{::($index === 0 ? 'active' : '')}}"  ng-repeat="listCourses in listCard track by $index" >
                                   <div class="row justify-content-center pb-5" ng-init="n = $index">
                                     <div class="col-sm-3 col-md-3 " ng-if="n < listCard.length">
+<<<<<<< Updated upstream
                                       <div class="card text-center h-100 text-white" style="width: 18rem;background:#189EBB;">
+=======
+                                      <div class="card text-center h-100 text-white" style="width: 18rem;background:#266B66;">
+>>>>>>> Stashed changes
                                         <h5 class="card-title">{{listCard[n].title}}</h5>  
                                         <img src="{{listCard[n].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                           <div class="card-body align-items-center">
                                               <p class="card-text">{{listCard[n].description}}</p>
+<<<<<<< Updated upstream
                                               <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background: #863C34;">Más</a>
+=======
+                                              <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background: #00413B;">Más</a>
+>>>>>>> Stashed changes
                                           </div>
                                       </div>
                                   </div>  
                                     <div class="col-sm-3 col-md-3 " ng-if="(n+1) < listCard.length">
+<<<<<<< Updated upstream
                                           <div class="card text-center h-100 text-white" style="width: 18rem;background:#189EBB;">
+=======
+                                          <div class="card text-center h-100 text-white" style="width: 18rem;background:#266B66;">
+>>>>>>> Stashed changes
                                             <h5 class="card-title ">{{listCard[n+1].title}}</h5>  
                                             <img src="{{listCard[n+1].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                               <div class="card-body align-items-center">
                                                   <p class="card-text">{{listCard[n+1].description}}</p>
+<<<<<<< Updated upstream
                                                   <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background: #863C34;">Más</a>
+=======
+                                                  <a href="#" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background: #00413B;">Más</a>
+>>>>>>> Stashed changes
                                               </div>
                                           </div>
                                       </div>
                                       <div class="col-sm-3 col-md-3" ng-if="(n+2) < listCard.length">
+<<<<<<< Updated upstream
                                         <div class="card text-center h-100 text-white" style="width: 18rem;background:#189EBB;">
+=======
+                                        <div class="card text-center h-100 text-white" style="width: 18rem;background:#266B66;">
+>>>>>>> Stashed changes
                                           <h5 class="card-title ">{{listCard[n+2].title}}</h5>  
                                           <img src="{{listCard[n+2].img}}" class="card-img-top rounded mx-auto d-block img-fluid w-75" alt="..." style="height: 120px;">
                                             <div class="card-body align-items-center">
                                                 <p class="card-text">{{listCard[n+2].description}}</p>
+<<<<<<< Updated upstream
                                                 <a href="" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background:#863C34;">Más</a>
+=======
+                                                <a href="" onclick="window.location.pathname = '/views/productList.html'" class="btn text-white" style="background:#00413B;">Más</a>
+>>>>>>> Stashed changes
                                             </div>
                                         </div>
                                     </div>
@@ -208,4 +243,8 @@
     <script src="/controller/landingAjs.js"></script>
 </body>
 
+<<<<<<< Updated upstream
 </html>
+=======
+</html>
+>>>>>>> Stashed changes
