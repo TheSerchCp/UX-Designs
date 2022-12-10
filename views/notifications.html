@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="ux">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notificaciones</title>
+    <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
+    <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
+    <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
+    <link rel="stylesheet" href="../components/CSS/notificaciones.css" />
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  </head>
+
+  <body ng-controller="notificationController" class="bg-light">
+    <header class="sticky-top">
+      <div ng-include src="'/views/component/navLanding.html'"></div>
+    </header>
+    <div
+      class="container-fluid"
+      style="
+        background-color: rgb(190, 187, 187);
+        margin-top: 15px;
+        height: 35px;
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 9px;
+        width: 98%;
+      "
+    >
+      <a style="margin-right: 15px;" href="" class="link-dark"ng-click="deleteList()">Eliminar todas las notificaciones como leídas</a>
+      <a href="" class="link-dark">Marcar todas como leídas</a>
+    </div>
+    <div
+      class="container-fluid overflow-auto"
+      style="
+        background-color: rgb(190, 187, 187);
+        margin-left: 15px;
+        height: 500px;
+        padding: 15px;
+        width: 98%;
+      "
+    >
+      <div ng-repeat="notifList in listCard track by $index">
+        <button
+          type="button"
+          class="btn btn-primary"
+          ng-init="n = $index"
+          style="width: 100%; height: 130px; border: 3px solid #000000;"
+        >
+          <div class="d-flex position-relative">
+            <img
+              src="{{listCard[n].img}}"
+              class="flex-shrink-0 me-3"
+              style="height: 100px; width: 100px; border-radius: 50%;"
+            />
+            <div style="text-align: justify;">
+              <h4 class="mt-0">{{listCard[n].title}}</h4>
+              <h5><p class="card-text">{{listCard[n].description}}</p></h5>
+            </div>
+          </div>
+        </button>
+        <hr/>
+      </div>
+    </div>
+
+    <footer class="text-center sticky-bottom">
+      <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/notificationsList.js"></script>
+  </body>
+</html>

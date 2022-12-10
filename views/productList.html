@@ -91,10 +91,6 @@
                                         <input type="checkbox" class="form-check-input">
                                         <span class="s-1 d-none d-sm-inline text-dark">Gimp</span>
                                     </a>
-                                    <a class="nav-link align-middle px-0 py-1" href="#">
-                                        <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark"></span>
-                                    </a>
                                 </div>
                             </div>
                           
@@ -110,14 +106,14 @@
                     <div class="col-auto col-md-12 col-xl-12 bg-light " >
                         <div class="row justify-content-center pb-3">
                             <div class="col-sm-4 col-md-4 col-lg-4 my-2" ng-repeat="products in listCard">
-                                <div class="card text-center h-100" style="width: 16rem;">
+                                <div class="card text-center h-100 text-white" style="width: 16rem;background: #189EBB">
                                     <img src="{{products.img}}" class="card-img-top rounded mx-auto d-block img-fluid w-100" alt="..." style="height: 150px;">
                                     <div class="card-body align-items-center">
                                         <h5 class="card-title text-start" ng-bind="products.title"></h5>
                                         <p class="card-text text-start" ng-bind="products.description"></p>
                                     </div>
                                     <div class="card-footer ">
-                                        <a href="#" class="btn btn-primary col-5">Más</a>
+                                        <a href="#" class="btn col-5 text-white" style="background:#863C34;">Más</a>
                                     </div>
                                 </div>
                             </div>
