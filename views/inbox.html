@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSES | List</title>
+    <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
+    <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
+    <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
+</head>
+<!-- //// -->
+
+<body ng-controller="inbox">
+
+    <header class="sticky-top ">
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+
+
+    <!--Sidebar de red social-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <p class="fw-bold fs-2">Mailbox </p>
+            </div>
+            <div class="col-3 offset-7">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row  ">
+            <div class="col-2" ng-repeat="products in listCard">
+                <div class="d-grid gap-3 col-10 mx-auto">
+                    <button type="button" class="btn btn-primary"
+                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
+                    <button type="button" class="btn btn-primary"
+                        style="border-color:#000000 ; background-color: #863C34;">Primary</button>
+                    <button type="button" class="btn btn-primary"
+                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
+                    <button type="button" class="btn btn-primary"
+                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
+                    <button type="button" class="btn btn-primary"
+                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
+                    <button type="button" class="btn btn-primary"
+                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
+
+                </div>
+                <br>
+                <br>
+                <p class="fw-bold fs-2">Etiquetas</p>
+                <br>
+                <br>
+                <img src="{{products.img}}" class="card-img-top rounded float-start " alt="..."
+                    style="height: 40px; width: 40px;">
+                <p class="text-center fw-bolder fs-6">Trabajo en progreso</p>
+                <br>
+
+
+                <img src="{{products.img}}" class="card-img-top rounded float-start " alt="..."
+                    style="height: 40px; width: 40px;">
+                <p class="text-center fw-bolder fs-6">Ofertas prometedoras</p>
+                <br>
+
+                <img src="{{products.img}}" class="card-img-top rounded float-start " alt="..."
+                    style="height: 40px; width: 40px;">
+                <p class="text-center fw-bolder fs-6">Leer despues</p>
+                <br>
+
+            </div>
+            <div class="col-auto">
+
+                <div class="vr h-100 "></div>
+
+            </div>
+            <div class="col-2 px-0" >
+                <div ng-repeat="avatar in avatars ">
+                    <img src="{{avatar.img}}" class=" card-img-top float-start " alt="..."
+                        style="border-radius:50% ; height: 75px; width: 75px;">
+                    <p class="text-center fw-bolder fs-6" ng-bind="avatar.name"> <br><p class=" text-center fs-6" ng-bind="avatar.mail"></p>
+                    </p>
+                    <br>
+                    <br>
+                </div>
+
+
+            </div>
+            <div class="col-auto">
+
+                <div class="vr h-100"></div>
+
+            </div>
+            <div class="col-6">a</div>
+        </div>
+
+
+
+    </div>
+
+    <footer class="text-center sticky-bottom">
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/inboxAjs.js"></script>
+</body>
+
+</html>
