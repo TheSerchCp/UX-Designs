@@ -17,83 +17,187 @@
       rel="stylesheet"
       href="/components/sweetalert/css/sweetalert2.css"
     />
+    <link rel="stylesheet" href="/components/stepper/style.css"/>
   </head>
 
   <body ng-controller="login">
-    <header class="sticky-top "">
+    <header class="sticky-top">
       <div  ng-include src="'/views/component/navbar.html'"></div>
     </header>
-    
-    <section class="h-auto">
-      <div class="container-fluid my-5 mx-2">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-md-9 col-lg-6 col-xl-5">
-            <img
-              src="/components/img/logRegister/keyboard-typing-backward.jpg"
-              class="img-fluid rounded-4"
-              alt="Sample image"
-            />
-          </div>
-          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 py-5 px-5 rounded" style="background: #5F97A4;">
-            <form name="form1">
-              <!-- Email input -->
-              <div class="form-group mb-4">
-                <input
-                  type="email"
-                  id="form3Example3"
-                  class="form-control form-control-lg"
-                  placeholder="Correo"
-                  minlength="22"
-                  maxlength="50"
-                  name="email"
-                  ng-model="email"
+    <section>
+      <div class="container ">
+        <div class="row d-flex my-0">
+          <div class="col-md-12 rounded my-2" style="background: #80A09D;">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-xl-6">
+                <img
+                  src="/components/img/logRegister/keyboard-typing-backward.jpg"
+                  class="img-fluid rounded"
+                  style="margin-left:-1rem ;"
+                  alt="Sample image"
                 />
-                <label ng-show="form1.email.$invalid && form1.email.$dirty" class="form-label" for="form3Example3"
-                style="color:#F00073;">Llena el campo</label>
-                <!-- <label class="form-label" for="form3Example3"
-                  >Email address</label
-                > -->
               </div>
+                   
+           <div class="col-md-12 col-lg-10 col-xl-4 offset-xl-1 py-5 px-5 rounded" style="background: #80A09D;">
+            <form id="regForm">
+              <div class="all-steps mb-3" id="all-steps"> <span class="step"></span> <span class="step"></span>  </div>  
+                <div class="tab">
+                  <h1 id="register" class="fw-bold mb-5">Login</h1>
+                  <form name="form1">
+                    <!-- Email input -->
+                    <div class="form-group mb-4">
+                      
+                      <input
+                        type="email"
+                        id="form3Example3"
+                        class="form-control form-control-lg"
+                        placeholder="Correo"
+                        minlength="22"
+                        maxlength="50"
+                        name="email"
+                        ng-model="email"
+                      />
+                      <label ng-show="form1.email.$invalid && form1.email.$dirty" class="form-label" for="form3Example3"
+                      style="color:#F00073;">Llena el campo</label>
+                      <!-- <label class="form-label" for="form3Example3"
+                        >Email address</label
+                      > -->
+                    </div>
+      
+                    <!-- Password input -->
+                    <div class="form-group mb-3">
+                      <input
+                        type="password"
+                        id="form3Example4"
+                        class="form-control form-control-lg"
+                        placeholder="Contraseña"
+                        name="password"
+                        ng-model = "password"
+                      />
+                      <label ng-show="form1.password.$invalid && form1.password.$dirty" class="form-label" for="form3Example3"
+                      style="color:#F00073;">Llena el campo</label>
+                      <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                    </div>
+                    <div class="text-center mt-4 pt-2">
+                      <button
+                        type="button"
+                        class="btn btn-lg col-md-11 col-sm-11 col-xs-11 col-xl-11 text-white"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;background:#863C34;"
+                        ng-disabled="form1.$pristine || form1.$invalid"
+                        onclick="window.location.pathname = '/views/productList.html'">
+                        Iniciar Sesión
+                      </button>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                      <!-- Checkbox -->
+                      <div class="form-check mb-0">
+                        <a class="text-body fw-bold list-group-item" for="form2Example3" id="prevBtn" onclick="nextPrev(-1)">
+                          Registrarse
+                        </a>
+                      </div>
+                      <a href="#!" class="text-body fw-bold list-group-item" id="nextBtn" onclick="nextPrev(1)">Olvidaste tu contraseña?</a>
+                    </div>
+      
+                  
+                  </form>
+                    <!-- <h3>Donation Type:</h3>
+                    <label class="container">One time
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Recurring
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                    </label>
+                    <p><input type="text" placeholder="Amount" oninput="this.className = ''" name="amount"></p> -->
 
-              <!-- Password input -->
-              <div class="form-group mb-3">
-                <input
-                  type="password"
-                  id="form3Example4"
-                  class="form-control form-control-lg"
-                  placeholder="Contraseña"
-                  name="password"
-                  ng-model = "password"
-                />
-                <label ng-show="form1.password.$invalid && form1.password.$dirty" class="form-label" for="form3Example3"
-                style="color:#F00073;">Llena el campo</label>
-                <!-- <label class="form-label" for="form3Example4">Password</label> -->
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center">
-                <!-- Checkbox -->
-                <div class="form-check mb-0">
-                  <a class="text-body" for="form2Example3">
-                    Registrarse
-                  </a>
                 </div>
-                <a href="#!" class="text-body">Olvidaste tu contraseña?</a>
-              </div>
-
-              <div class="text-center mt-4 pt-2">
-                <button
-                  type="button"
-                  class="btn btn-lg col-md-11 col-sm-11 col-xs-11 col-xl-11 text-white"
-                  style="padding-left: 2.5rem; padding-right: 2.5rem;background:#863C34;"
-                  ng-disabled="form1.$pristine || form1.$invalid">
-                  Iniciar Sesión
-                </button>
-              </div>
-            </form>
+                <div class="tab">
+                  <h1 id="register" class="fw-bold mb-5">Crear tu cuenta</h1>
+                  <form name="form1" novalidate>
+                    <!-- Email input -->
+                    <div class="form-group mb-4 mt-5">
+                      <input
+                        type="text"
+                        id="form3Example3"
+                        class="form-control form-control-lg"
+                        placeholder="Nombre completo"
+                        name = "name"
+                        ng-model ="name"
+                        maxlength="25" 
+                        minlength="6"
+                      />
+                      <label ng-show="form1.name.$invalid && form1.name.$dirty" class="form-label" for="form3Example3"
+                      style="color:#F00073;">Llena el campo</label> 
+                    </div>
+      
+                    <!-- Password input -->
+                    <div class="form-group mb-4">
+                      <input
+                        type="email"
+                        id="form3Example4"
+                        class="form-control form-control-lg"
+                        placeholder="Email"
+                        name = "email"
+                        ng-model = "email"
+                        minlength="22"
+                        maxlenght = "45"
+                      />
+                      <label ng-show="form1.email.$invalid && form1.email.$dirty" class="form-label" for="form3Example3"
+                      style="color:#F00073;">Correo no valido</label>
+                      <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                    </div>
+                    <div class="form-group mb-4">
+                      <input
+                        type="password"
+                        id="form3Example4"
+                        class="form-control form-control-lg"
+                        placeholder="Contrasena"
+                        name = "password"
+                        ng-model="password"
+                        minlength="4"
+                        maxlength="10"
+                      />
+                      <label ng-show="form1.password.$invalid && form1.password.$dirty" class="form-label" for="form3Example3"
+                      style="color:#F00073;">Llena el campo</label>
+                      <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                    </div>
+                    <div class="form-group mb-4">
+                      <input
+                        type="password"
+                        id="form3Example4"
+                        class="form-control form-control-lg"
+                        placeholder="Confirmar contrasena"
+                        name = "confirmPassword"
+                        ng-model = "confirmPassword"
+                        minlength="3"
+                        maxlength="12"
+                      />
+                      <label ng-show="form1.confirmPassword.$invalid && form1.confirmPassword.$dirty" class="form-label" for="form3Example3"
+                      style="color:#F00073;">Llena el campo</label>
+                      <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                    </div>
+              
+      
+                    <div class="text-center mt-4 pt-2">
+                      <button
+                        type="button"
+                        class="btn btn-lg col-md-11 col-sm-11 col-xs-11 col-xl-11 text-white"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;background:#863C34;"
+                       ng-disabled = "form1.$pristine || form1.$invalid">
+                        Registrarse
+                      </button>
+                    </div>
+                  </form>
+          </div>
+            </div>
+          
+   
           </div>
         </div>
-      </div>
+      </div>     
     </section>
+      
 
     <footer class="text-center sticky-bottom">
       <div  ng-include src="'/views/component/footer.html'"></div>
@@ -101,6 +205,7 @@
 
     <script src="/components/popper.min.js"></script>
     <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/stepper/script.js"></script>
     <script src="/components/angularjs/angular-1.4.6.min.js"></script>
     <script src="/components/angularjs/angular-route.js"></script>
     <script src="/components/angularjs/angular-locale_es-mx.js"></script>

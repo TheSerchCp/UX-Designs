@@ -5,7 +5,7 @@ app.controller("landing", ['$rootScope', '$scope', '$http', function ($rootScope
 
 
 // $scope.listCard = []
-// $scope.url = window.location.href;
+//  $scope.url = $location.absUrl();
 // console.log($scope.url)
 
 $scope.listCard = [

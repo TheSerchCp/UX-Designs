@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
+    <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
+    <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
+</head>
+<!-- //// -->
+
+<body ng-controller="productList">
+
+    <header class="sticky-top ">
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+
+
+    <!--BOTONES DEL DASHBOARD-->
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2  ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
+                    <ul
+                        class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
+                        <div class="nav-item ">
+                            <li class="box">
+                                <div class="ms-3 txt-dash d-flex flex-row justify-content-around ">
+                                    <p>Dashboard</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/dashboard.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Vista General</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/eye.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Chat</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/devicemessage.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Equipos</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/profile2user.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="ms-2 me.auto ">
+                                    <h1>Atajos</h1>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Tareas</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/tasksquare.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Reportes</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/receiptedit.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="boxxd">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <p>Ajustes</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/setting3.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="box-blue">
+                                <div class="ms-3 txt-box text-center ">
+                                    <p>Espacio Usado</p>
+                                    <div>
+                                        <img src="../components/img/dashboard/barra.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="box-blue">
+                                <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
+                                    <div>
+                                        <img src="../components/img/dashboard/user.png">
+                                    </div>
+                                    <p>Junior</p>
+                                </div>
+                            </li>
+                            <br>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="col py-3">
+                <div class="">
+                    <div class="col-right col-md-10 col-xl-10 bg-light ">
+                        <div class="row justify-content-left pb-3">
+                            ola
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <footer class="text-center sticky-bottom">
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/productListAjs.js"></script>
+</body>
+
+</html>
