@@ -139,7 +139,7 @@
                 </div>
                 <br>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button type="button" class="btn  btn-lg text-white "style="background:#266B66;">Agregar</button>
+                    <button type="button" class="btn  btn-lg text-white "style="background:#266B66;" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</button>
                 </div>
                 <br>
                 <table class="table table-borderless table-responsive rounded">
@@ -196,6 +196,137 @@
     <footer class="text-center sticky-bottom">
         <div ng-include src="'/views/component/footer.html'"></div>
     </footer>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-white justify-content-center  " style="background: #00413B;">
+          <h1 class="modal-title fs-5 " id="exampleModalLabel">Registrar Curso</h1>
+        </div>
+        <div class="modal-body">
+            <form name="form1" novalidate>
+                <div class="row">
+                <div class="form-group form-floating col-md-6">
+                    <input
+                      type="date"
+                      class="form-control form-control-sm "
+                      ng-class="{
+                        '': form1.dateE.$untouched || form1.dateE.$touched,
+                        'is-valid' : form1.dateE.$valid,
+                        'is-invalid' : form1.dateE.$invalid && form1.dateE.$dirty}"
+                      placeholder="Fecha expiracion"
+                      id="floatinginput"
+                      name="dateE"
+                      ng-model = "dateE"
+                      ng-required = "true"
+                    />
+                    <label for="floatinginput" class="text-black-50" ng-hide="form1.dateE.$invalid && form1.dateE.$dirty">Fecha expiracion</label>
+                    <label ng-show="form1.dateE.$invalid && form1.dateE.$dirty" class="form-label" for="floatinginput"
+                    style="color:#F00073;">Llena el campo</label>
+                    <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                  </div>
+                  <div class="form-group form-floating col-md-6">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm "
+                      ng-class="{
+                        '': form1.name.$untouched || form1.name.$touched,
+                        'is-valid' : form1.name.$valid,
+                        'is-invalid' : form1.name.$invalid && form1.name.$dirty}"
+                      placeholder="Nombre"
+                      id="floatinginput"
+                      name="name"
+                      ng-model = "name"
+                      minlength="4"
+                      maxlength="25"
+                      ng-required = "true"
+                    />
+                    <label for="floatinginput" class="text-black-50" ng-hide="form1.name.$invalid && form1.name.$dirty">Nombre</label>
+                    <label ng-show="form1.name.$invalid && form1.name.$dirty" class="form-label" for="floatinginput"
+                    style="color:#F00073;">Llena el campo</label>
+                    <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                  </div>
+                  <div class="form-group form-floating col-md-12 my-2">
+                    <!-- <input
+                      type=""
+                      class="form-control form-control-sm "
+                      ng-class="{
+                        '': form1.name.$untouched || form1.name.$touched,
+                        'is-valid' : form1.name.$valid,
+                        'is-invalid' : form1.name.$invalid && form1.name.$dirty}"
+                      placeholder="Nombre"
+                      id="floatinginput"
+                      name="name"
+                      ng-model = "name"
+                      ng-required = "true"
+                    /> -->
+                    <textarea  class="form-control form-control-sm "
+                    ng-class="{
+                      '': form1.description.$untouched || form1.description.$touched,
+                      'is-valid' : form1.description.$valid,
+                      'is-invalid' : form1.description.$invalid && form1.description.$dirty}"
+                    placeholder="Descripcion"
+                    id="floatinginput"
+                    name="description"
+                    ng-model = "description"
+                    ng-required = "true"></textarea>
+                    <label for="floatinginput" class="text-black-50" ng-hide="form1.description.$invalid && form1.description.$dirty">Descripcion</label>
+                    <label ng-show="form1.description.$invalid && form1.description.$dirty" class="form-label" for="floatinginput"
+                    style="color:#F00073;">Llena el campo</label>
+                    <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                  </div>
+                     <div class="form-group form-floating col-md-6 my-2">
+                    <input
+                      type="number"
+                      class="form-control form-control-sm "
+                      ng-class="{
+                        '': form1.units.$untouched || form1.units.$touched,
+                        'is-valid' : form1.units.$valid,
+                        'is-invalid' : form1.units.$invalid && form1.units.$dirty}"
+                      placeholder="Unidades"
+                      id="floatinginput"
+                      name="units"
+                      ng-model = "units"
+                      ng-required = "true"
+                    />
+                    <label for="floatinginput" class="text-black-50" ng-hide="form1.units.$invalid && form1.units.$dirty">Unidades</label>
+                    <label ng-show="form1.units.$invalid && form1.units.$dirty" class="form-label" for="floatinginput"
+                    style="color:#F00073;">Llena el campo</label>
+                    <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                  </div>
+                  <div class="form-group form-floating col-md-6 my-2">
+                    <input
+                      type="number"
+                      class="form-control form-control-sm "
+                      ng-class="{
+                        '': form1.cost.$untouched || form1.cost.$touched,
+                        'is-valid' : form1.cost.$valid,
+                        'is-invalid' : form1.cost.$invalid && form1.cost.$dirty}"
+                      placeholder="Unidades"
+                      id="floatinginput"
+                      name="cost"
+                      ng-model = "cost"
+                      ng-required = "true"
+                    />
+                    <label for="floatinginput" class="text-black-50" ng-hide="form1.cost.$invalid && form1.cost.$dirty">Costo</label>
+                    <label ng-show="form1.cost.$invalid && form1.cost.$dirty" class="form-label" for="floatinginput"
+                    style="color:#F00073;">Llena el campo</label>
+                    <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                  </div>
+          </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn text-white" style="background: #266B66;">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <script src="/components/popper.min.js"></script>
     <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>

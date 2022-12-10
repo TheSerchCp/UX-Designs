@@ -1,6 +1,10 @@
 
     <nav class="navbar navbar-expand" style="background-color: #00413B;" >
         <div class="container-fluid " >
+            <div style="background: #266b666a;height:40px;" class="rounded-circle mx-1">
+                <img src="/components/img/logo.png" style="width: 30px;height:40px" class="img-fluid mx-3">
+            </div>
+            
             <a class="navbar-brand text-white" href="#">
                 COURSES
             </a>
@@ -12,9 +16,6 @@
                 <ul class="navbar-nav ">
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-current="page" href="#" onclick="window.location.pathname = '/views/productList.html'">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Categories</a>
                     </li>
                     <li class="nav-item dropdown" style="background: #00413B;">
                         <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Errores</a>
@@ -82,11 +83,12 @@
 
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link text-white" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                <a class="nav-link text-white" href="#" onclick="window.location.pathname = '/views/carritoCompras.html'"><i class="fa-solid fa-cart-shopping"></i></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="/components/img/landing/Photoshop.jpg" style="width: 30px;height:30px" class="rounded-circle img-fluid mb-5"></a>
                                 <ul class="dropdown-menu" style="margin-left: -7rem;margin-top:-2rem; background: #00413B;">
+                                    <li><a class="dropdown-item text-white" href="#" onclick="window.location.pathname = '/views/profile.html'">Perfil</a></li>
                                   <li><a class="dropdown-item text-white" href="#" onclick="window.location.pathname = '/views/login.html'">Iniciar Sesion</a></li>
                                   <li><a class="dropdown-item text-white" href="#" onclick="window.location.pathname = '/views/register.html'">Registrarse</a></li>
                                   <li>

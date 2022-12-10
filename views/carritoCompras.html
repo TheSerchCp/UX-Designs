@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <ng-include src="'/views/component/head.html'"></ng-include>
+</head>
+<!-- //// -->
+
+<body ng-controller="productList">
+
+    <header class="sticky-top ">
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+
+    <div class="row text-center">
+        <div class="col-4" style="text-align: left; padding-left: 5%; padding-top: 2%;">
+            <div class="row">
+                <div class="col-6">
+                    <a href="#"><img style="width: 25%; float: left;" src="../components/assets/flecha-izquierda.png"
+                            alt=""></a>
+                    <p style="padding: 4.7%; margin-left: 30%; font-size: 22px; font-weight: bold;">Regresar</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4" style="padding-top: 2%; padding-bottom: 2%;">
+            <h1>Carrito de Compras</h1>
+        </div>
+    </div>
+
+    <div class="row text-center mb-3">
+        <div class="row">
+            <div class="col-8"
+                style="text-align:start; margin-left: 17%; padding: 1%; background-color: cadetblue; border-radius: 10px; border-style: solid;">
+                <div class="row">
+                    <div class="col-7">
+                        <h2>Curso de Java</h2>
+                        <h6 style="color: white;">Comprendiendo la Programación Orientada a Obtetos</h6>
+                    </div>
+                    <div class="col-3" style="text-align: left;">
+                        <h3 class="mt-4" style="color: white;">$499</h3>
+                    </div>
+                        <div class="col-2" style="text-align: left;"><img class="mt-3" style="width: 30%;"
+                                src="../components/assets/delete.png" alt="">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mb-3">
+        <div class="row">
+            <div class="col-8"
+                style="text-align:start; margin-left: 17%; padding: 1%; background-color: cadetblue; border-radius: 10px; border-style: solid;">
+                <div class="row">
+                    <div class="col-7">
+                        <h2>Curso de C++</h2>
+                        <h6 style="color: white;">Comprende y analiza las librerias desde cero</h6>
+                    </div>
+                    <div class="col-3" style="text-align: left;">
+                        <h3 class="mt-4" style="color: white;">$699</h3>
+                    </div>
+                    <div class="col-2" style="text-align: left;"><img class="mt-3" style="width: 30%;"
+                            src="../components/assets/delete.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mb-3">
+        <div class="row">
+            <div class="col-8"
+                style="text-align:start; margin-left: 17%; padding: 1%; background-color: cadetblue; border-radius: 10px; border-style: solid;">
+                <div class="row">
+                    <div class="col-7">
+                        <h2>Curso de Word</h2>
+                        <h6 style="color: white;">Certificate con Nivel Experto</h6>
+                    </div>
+                    <div class="col-3" style="text-align: left;">
+                        <h3 class="mt-4" style="color: white;">$349</h3>
+                    </div>
+                    <div class="col-2" style="text-align: left;"><img class="mt-3" style="width: 30%;"
+                            src="../components/assets/delete.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mb-3">
+        <div class="row">
+            <div class="col-8"
+                style="text-align:start; margin-left: 17%; padding: 1%; background-color: cadetblue; border-radius: 10px; border-style: solid;">
+                <div class="row">
+                    <div class="col-7">
+                        <h2>Curso de Excel</h2>
+                        <h6 style="color: white;">Certificate con Nivel Experto</h6>
+                    </div>
+                    <div class="col-3" style="text-align: left;">
+                        <h3 class="mt-4" style="color: white;">$399</h3>
+                    </div>
+                    <div class="col-2" style="text-align: left;"><img class="mt-3" style="width: 30%;"
+                            src="../components/assets/delete.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center mt-5 mb-3">
+        <div class="row">
+            <div class="col-8"
+                style="text-align:start; margin-left: 17%; padding: 1%; background-color: rosybrown; border-radius: 10px; border-style: solid;">
+                <div class="row">
+                    <div class="col-4">
+                        <h1>Total a Pagar</h1>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <h2 class="mt-2" style="color: white;">$399</h2>
+                    </div>
+                    <div class="col-4" style="text-align: center;">
+                        <a class="mt-2 list-group-item text-white" href="" onclick="window.location.pathname = '/views/comprasCursos.html'"
+                            style=" border-radius: 10px; margin-left: 20%; background-color: #266B66; width: 50%; padding: 2%;">
+                            Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center sticky-bottom">
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/productListAjs.js"></script>
+</body>
+
+</html>
