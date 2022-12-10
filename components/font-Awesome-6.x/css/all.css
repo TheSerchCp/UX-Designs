@@ -3,6 +3,84 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2022 Fonticons, Inc.
  */
+ .box-dash{
+  width: 320px;
+  height: 80px;
+  left: 340px;
+  top: 248px;
+
+  background: #189EBB;
+  border: 3px solid #000000;
+  border-radius: 18px;
+ }
+ .container-sm{
+  width: 77.22%;
+  margin-left: 90px;
+ }
+ .barra-lateral{
+  width: 950px;
+  height: 0px;
+  left: 320px;
+  top: 74px;
+
+  border: 2px solid #000000;
+  transform: rotate(90deg);
+ }
+.box-blue{
+  width: 258px;
+  height: 100px;
+  left: 19px;
+  top: 743px;
+
+  background: #189EBB;
+  border: 3px solid #000000;
+  border-radius: 18px;
+}
+.box{
+  box-sizing: border-box;
+
+  width: 297px;
+  height: 78px;
+  left: 15px;
+  
+  background: #00655C;
+  border: 3px solid #000000;
+  border-radius: 15px;
+}
+.boxxd{
+  box-sizing: border-box;
+
+  width: 297px;
+  height: 78px;
+  left: 13px;
+  
+  background: #ffffff;
+}
+.txt-nrm{
+  padding-top: 7%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 24px;
+}
+.txt-box{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+.txt-dash{
+
+padding-top: 7%;
+font-family: 'Inter';
+font-style: normal;
+font-size: 24px;
+
+
+color: #FFFFFF;
+}
+
+
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900); }
