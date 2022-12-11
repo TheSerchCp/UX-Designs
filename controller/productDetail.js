@@ -6,42 +6,44 @@ app.controller("productDetailController", ['$rootScope', '$scope', '$http', func
 
     $scope.product = {
             title: "JAVA",
-            img: "/components/img/profile/sergio.jpg",
-            desciption: "2Aprende lo basico para programar en Java.",
-            prize: "$258.22!",
+            img: "/components/img/productDetail/java.jpg",
+            description: "Aprende lo basico para programar en Java.",
+            prize: "$258.22",
             dsp: "250",
+            detail: {
+                1: "Orientado a objetos",
+                2: "Ciclos",
+                3: "Usa base de datos",
+                4: "Aplicaciones cliente-servidor"
+            }
         };
-
-    $scope.others = [
+    $scope.otherProducts = 
+    [
         {
-            img: "1596-7822-3268-7456",
-            title: "07/26",
-            prize: "Sergio Cortes",
+            img: "/components/img/productDetail/excel.jpg",
+            title: "Curso Excel completo",
+            prize: "$5",
         },
         {
-            img: "1596-7822-3268-7456",
-            title: "07/26",
-            prize: "Sergio Cortes",
+            img: "/components/img/productDetail/powerpoint.jpg",
+            title: "Curso Power Point completo",
+            prize: "$15",
         },
         {
-            img: "1596-7822-3268-7456",
-            title: "07/26",
-            prize: "Sergio Cortes",
+            img: "/components/img/productDetail/word.jpg",
+            title: "Curso Word completo",
+            prize: "$15",
         },
         {
-            img: "1596-7822-3268-7456",
-            title: "07/26",
-            prize: "Sergio Cortes",
+            img: "/components/img/productDetail/mysql.jpg",
+            title: "Base de datos MySQL",
+            prize: "$20",
         },
         {
-            img: "1596-7822-3268-7456",
-            title: "07/26",
-            prize: "Sergio Cortes",
+            img: "/components/img/productDetail/blender.png",
+            title: "Diseña y anima con blender",
+            prize: "$9.99",
         },
-        {
-            img: "1596-7822-3268-7456",
-            title: "07/26",
-            prize: "Sergio Cortes",
-        }, 
     ]
+    console.log($scope.otherProducts)
 }]);
