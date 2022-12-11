@@ -1,62 +1,192 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="ux">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COURSES | Profile</title>
     <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
     <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
     <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
     <link rel="stylesheet" href="../components/CSS/notificaciones.css" />
-    <link rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../components/CSS/profiile.css" />
+  </head>
+  <body ng-controller="profileController" class="bg-light">
     <header class="sticky-top">
-        <div ng-include src="'/views/component/navLanding.html'"></div>
-      </header>
+      <div ng-include src="'/views/component/navLanding.html'"></div>
+    </header>
 
-
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-7" style="background-color: aqua;">
-                <div class="container-fluid">
-                    <div class="col align-middle">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="container-fluid" style="padding-left: 50px;padding-right: 100px;">
+            <div class="col text-center" style="margin: 25px; height: 533px;">
+              <div class="card card-profile">
+                <img src="{{dataProfile.img}}" class="mx-auto d-block" />
+                <div class="card-body">
+                  <h5 class="card-title" style="margin-bottom: 15px;">
+                    Perfil
+                  </h5>
+                  <br>
+                  <div class="row">
+                    <div class="col">
+                      <input
+                        type="text"
+                        placeholder="name"
+                        value="{{dataProfile.name}}"
+                      />
+                      <input
+                        type="text"
+                        placeholder="name"
+                        value="{{dataProfile.cellphone}}"
+                      />
                     </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        placeholder="name"
+                        value="{{dataProfile.email}}"
+                      />
+
+                      <div class="input-wrapper">
+                        <input
+                          class="password"
+                          type="password"
+                          placeholder="name"
+                          value="{{dataProfile.password}}"
+                        />
+                        <div class="togglePassword">
+                          <i class="bi bi-eye-fill input-icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      class="position-absolute bottom-0 start-50 translate-middle btn-profile"
+                      style="margin-top: 0px;"
+                    >
+                      Guardar
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="col-5" style="background-color: green;">
-                s
+          </div>
+        </div>
+        <div class="col">
+          <div class="container-fluid" style="height: 533px;">
+            <!-- metodos de pago -->
+            <div class="row text-center div-directories">
+              <div class="card card-directories">
+                <div class="card-body">
+                  <h4 class="card-title">Métodos de pago</h4>
+                  <div ng-repeat=" method in methodPay">
+                    <div class="row">
+                      <div class="col-4">
+                        <input
+                          type="text"
+                          placeholder="card-number"
+                          value="{{method.serie}}"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <input
+                          type="text"
+                          placeholder="card-number"
+                          value="{{method.caducity}}"
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          placeholder="card-number"
+                          value="{{method.name}}"
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          placeholder="card-number"
+                          value="{{method.service}}"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- Direciones -->
+            <div class="row text-center div-directories2">
+              <div class="card card-directories2">
+                <div class="card-body">
+                  <h4 class="card-title" style="margin-bottom: 15px;">
+                    Dirección
+                  </h4>
+                  <div class="subtitulo">
+                    <h6
+                      class="card-subtitle mb-2 text-muted"
+                      style="color: white !important;"
+                    >
+                      {{dataProfile.direction}}
+                    </h6>
+                  </div>
+                  <div class="inputs" style="margin-top: 30px;">
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" placeholder="calle" />
+                      </div>
+                      <div class="col">
+                        <input type="text" placeholder="Número" />
+                      </div>
+                      <div class="col">
+                        <input type="text" placeholder="Colonia" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" placeholder="Entre calles" />
+                      </div>
+                      <div class="col">
+                        <button class="btn-direction">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
     <footer class="text-center sticky-bottom">
-        <div ng-include src="'/views/component/footer.html'"></div>
-      </footer>
+      <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
 
     <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
-  <script src="/components/jquery/dist/jquery.min.js"></script>
-  <script src="/components/popper.min.js"></script>
-  <script src="/components/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
-  <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
-  <script src="/components/angularjs/angular-1.4.6.min.js"></script>
-  <script src="/components/angularjs/angular-route.js"></script>
-  <script src="/components/angularjs/angular-locale_es-mx.js"></script>
-  <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
-  <script src="/controller/notificationsList.js"></script>
-</body>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+      integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.bundle.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/profile.js"></script>
+    <script src="../components/JS/passwordInput.js"></script>
+  </body>
 </html>
