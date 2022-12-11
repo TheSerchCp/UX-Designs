@@ -22,10 +22,13 @@
     <!--Sidebar de red social-->
     <div class="container-fluid">
         <div class="row">
+
             <div class="col-2">
-                <p class="fw-bold fs-2">Mailbox </p>
+                <p class="fw-bold fs-2 mt-2">Mailbox </p>
             </div>
+
             <div class="col-3 offset-7">
+                <br>
                 <div class="input-group rounded">
                     <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                         aria-describedby="search-addon" />
@@ -36,20 +39,17 @@
             </div>
         </div>
         <div class="row  ">
+
             <div class="col-2" ng-repeat="products in listCard">
-                <div class="d-grid gap-3 col-10 mx-auto">
-                    <button type="button" class="btn btn-primary"
-                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
-                    <button type="button" class="btn btn-primary"
-                        style="border-color:#000000 ; background-color: #863C34;">Primary</button>
-                    <button type="button" class="btn btn-primary"
-                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
-                    <button type="button" class="btn btn-primary"
-                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
-                    <button type="button" class="btn btn-primary"
-                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
-                    <button type="button" class="btn btn-primary"
-                        style="border-color:#000000 ; background-color: #189EBB;">Primary</button>
+                <div ng-repeat="icon in iconos" class="d-grid gap-3 col-10 mx-auto">
+                    
+                    <button " type=" button" class=" my-3 btn btn-primary "
+                        style="height: 50px; border-color:#000000 ; background-color: #189EBB;">
+                        <img style="height: 40px; width: 40px;" class="float-start" src="{{icon.img}}" alt=""
+                            class="float-start">
+                        <p ng-bind="icon.description"></p>
+                    </button>
+
 
                 </div>
                 <br>
@@ -79,11 +79,12 @@
                 <div class="vr h-100 "></div>
 
             </div>
-            <div class="col-2 px-0" >
+            <div class="col-2 px-0">
                 <div ng-repeat="avatar in avatars ">
                     <img src="{{avatar.img}}" class=" card-img-top float-start " alt="..."
                         style="border-radius:50% ; height: 75px; width: 75px;">
-                    <p class="text-center fw-bolder fs-6" ng-bind="avatar.name"> <br><p class=" text-center fs-6" ng-bind="avatar.mail"></p>
+                    <p class="text-center fw-bolder fs-6" ng-bind="avatar.name"> <br>
+                    <p class=" text-center fs-6" ng-bind="avatar.mail"></p>
                     </p>
                     <br>
                     <br>
@@ -96,7 +97,62 @@
                 <div class="vr h-100"></div>
 
             </div>
-            <div class="col-6">a</div>
+            <div ng-repeat="avatares in listCards" class="col-6">
+                <p>
+                    Jun 1 2021
+                </p>
+                <br>
+                <p class="ms-5 fw-bold fs-3">Director HTTP</p>
+                <br>
+                <div class="row ">
+                    <div class="col-auto">
+                        <img src="{{avatares.img}}" alt="" style="border-radius:50% ; height: 75px; width: 75px;">
+
+                    </div>
+                    <div class="col-10 h-100">
+                        <p class="fs-5 pt-3" ng-bind="avatares.description">
+                        </p>
+                        <p ng-bind="avatares.fecha" class="text-end"></p>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <div ng-repeat="avatares in listCards2" class="row ">
+                    <div class="col-auto">
+                        <img src="{{avatares.img}}" alt="" style="border-radius:50% ; height: 75px; width: 75px;">
+
+                    </div>
+                    <div class="col-10 h-100">
+                        <p class="fs-5 pt-3" ng-bind="avatares.description">
+                        </p>
+                        <p ng-bind="avatares.fecha" class="text-end"></p>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <div ng-repeat="avatares in listCards3" class="row ">
+                    <div class="col-auto">
+                        <img src="{{avatares.img}}" alt="" style="border-radius:50% ; height: 75px; width: 75px;">
+
+                    </div>
+                    <div class="col-10 h-100">
+                        <p ng-bind="avatares.fecha" class="text-end"></p>
+                        <br>
+                        <br>
+                        <p class=" fw-light pt-3" ng-bind="avatares.description">
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="input-group">
+                        <textarea class="form-control" id="textAreaExample" rows="3"></textarea>
+
+                        <button style="color: #fff; border-color:#000000 ; background-color: #863C34;" type="button"
+                            class="btn ">Enviar</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
