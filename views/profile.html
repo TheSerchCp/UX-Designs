@@ -7,34 +7,157 @@
     <title>COURSES | Profile</title>
     <ng-include src="'/views/component/head.html'"></ng-include>
     <link rel="stylesheet" href="../components/CSS/notificaciones.css" />
+    <link rel="stylesheet" href="/components/CSS/profile.css" />
     <link rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
-<body>
+<body ng-controller="profileController">
     <header class="sticky-top">
         <div ng-include src="'/views/component/navbar.html'"></div>
       </header>
 
 
-      <div class="container-fluid">
-        <div class="row">
-            <div class="col-7" style="background-color: aqua;">
-                <div class="container-fluid">
-                    <div class="col align-middle">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-lg-6">
+            <div class="container" style="padding-left: 50px;padding-right: 100px;">
+              <div class="col text-center" style="margin: 25px; height: 533px;">
+                <div class="card card-profile">
+                  <img src="{{dataProfile.img}}" class="mx-auto d-block" />
+                  <div class="card-body">
+                    <h5 class="card-title" style="margin-bottom: 15px;">
+                      Perfil
+                    </h5>
+                    <br>
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          type="text"
+                          placeholder="name"
+                          value="{{dataProfile.name}}"
+                        />
+                        <input
+                          type="text"
+                          placeholder="name"
+                          value="{{dataProfile.cellphone}}"
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          placeholder="name"
+                          value="{{dataProfile.email}}"
+                        />
+  
+                        <div class="input-wrapper">
+                          <input
+                            class="password"
+                            type="password"
+                            placeholder="name"
+                            value="{{dataProfile.password}}"
+                          />
+                          <div class="togglePassword">
+                            <i class="bi bi-eye-fill input-icon"></i>
                           </div>
+                        </div>
+                      </div>
                     </div>
+                    <div>
+                      <button
+                        class="position-absolute bottom-0 start-50 translate-middle btn-profile"
+                        style="margin-top: 0px;"
+                      >
+                        Guardar
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="col-5" style="background-color: green;">
-                s
+          </div>
+          <div class="col">
+            <div class="container my-5" style="height: 513px;">
+              <!-- metodos de pago -->
+              <div class="row text-center div-directories">
+                <div class="card card-directories">
+                  <div class="card-body">
+                    <h4 class="card-title">Métodos de pago</h4>
+                    <div ng-repeat=" method in methodPay">
+                      <div class="row">
+                        <div class="col-4">
+                          <input
+                            type="text"
+                            placeholder="card-number"
+                            value="{{method.serie}}"
+                          />
+                        </div>
+                        <div class="col-2">
+                          <input
+                            type="text"
+                            placeholder="card-number"
+                            value="{{method.caducity}}"
+                          />
+                        </div>
+                        <div class="col">
+                          <input
+                            type="text"
+                            placeholder="card-number"
+                            value="{{method.name}}"
+                          />
+                        </div>
+                        <div class="col">
+                          <input
+                            type="text"
+                            placeholder="card-number"
+                            value="{{method.service}}"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Direciones -->
+              <div class="row text-center div-directories2 my-5">
+                <div class="card card-directories2">
+                  <div class="card-body">
+                    <h4 class="card-title text-white fw-bold" style="margin-bottom: 15px;">
+                      Dirección
+                    </h4>
+                    <div class="subtitulo">
+                      <h6
+                        class="card-subtitle mb-2 text-muted"
+                        style="color: white !important;"
+                      >
+                        {{dataProfile.direction}}
+                      </h6>
+                    </div>
+                    <div class="inputs" style="margin-top: 30px;">
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" placeholder="Calle" />
+                        </div>
+                        <div class="col">
+                          <input type="text" placeholder="Número" />
+                        </div>
+                        <div class="col">
+                          <input type="text" placeholder="Colonia" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" placeholder="Entre calles" />
+                        </div>
+                        <div class="col">
+                          <button class="btn-direction">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
 
@@ -55,6 +178,7 @@
   <script src="/components/angularjs/angular-route.js"></script>
   <script src="/components/angularjs/angular-locale_es-mx.js"></script>
   <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
-  <script src="/controller/notificationsList.js"></script>
+  <script src="/controller/profile.js"></script>
+    <script src="/components/JS/passwordInput.js"></script>
 </body>
 </html>

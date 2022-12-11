@@ -54,13 +54,14 @@
                               class="form-control form-control-lg"
                               ng-class="{
                                 '': form2.name.$untouched || form2.name.$touched,
-                                'is-valid' : form2.name.$valid,
+                                'is-valid' : form2.name.$valid && form2.$valid || form2.name.$valid && form2.$dirty,
                                 'is-invalid' : form2.name.$invalid && form2.name.$dirty}"
                               id="floatinginput"
                               name = "name"
                               ng-model ="name"
                               maxlength="25" 
                               minlength="6"
+                              ng-required = "true"
                             />
                             <label for="floatinginput" class="text-black-50" ng-hide="form2.name.$invalid && form2.name.$dirty">Nombre completo</label>
                             <label ng-show="form2.name.$invalid && form2.name.$dirty" class="form-label" for="floatinginput"
@@ -90,6 +91,7 @@
                                 id="floatinginput"
                                 minlength="22"
                                 maxlength="50"
+                                ng-required = "true"
                               />
                               <!-- ng-hide="form2.email.$invalid && form2.email.$dirty" -->
                               <label for="floatinginput" class="text-black-50" >Correo</label>
@@ -122,6 +124,7 @@
                               ng-model = "password"
                               minlength="3"
                               maxlength="12"
+                              ng-required = "true"
                             />
                             <label for="floatinginput" class="text-black-50" ng-hide="form2.password.$invalid && form2.password.$dirty">Contraseña</label>
                             <label ng-show="form2.password.$invalid && form2.password.$dirty" class="form-label" for="floatinginput"
@@ -143,6 +146,7 @@
                               ng-model = "confirmPassword"
                               minlength="3"
                               maxlength="12"
+                              ng-required = "true"
                             />
                             <label for="floatinginput" class="text-black-50" ng-hide="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty">Confirmar contraseña</label>
                             <label ng-show="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty" class="form-label" for="floatinginput"

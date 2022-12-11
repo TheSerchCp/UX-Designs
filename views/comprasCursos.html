@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/components/bootstrap-5.2.3/bootstrap.css" />
+    <link rel="stylesheet" href="/components/font-Awesome-6.x/css/all.css" />
+    <link rel="stylesheet" href="/components/sweetalert/css/sweetalert2.css" />
+</head>
+<!-- //// -->
+
+<body ng-controller="productList">
+
+    <header class="sticky-top ">
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row my-5" style="display: flex; justify-content: center;">
+            <div class="col-2 text-center">
+                <h3 style="font-weight: bolder; color: darkslateblue;">Curso</h3>
+            </div>
+            <div class="col-2 text-center">
+                <h3 style="font-weight: bolder; color: darkslateblue;">Cantidad</h3>
+            </div>
+            <div class="col-2 text-center">
+                <h3 style="font-weight: bolder; color: darkslateblue;">Eliminar</h3>
+            </div>
+            <div class="col-2 text-center">
+                <h3 style="font-weight: bolder; color: darkslateblue;">Precio</h3>
+            </div>
+            <br>
+            <hr>
+        </div>
+    
+        <div class="row my-4" style="display: flex; justify-content: center;">
+            <div class="col-2 text-center mb-4">
+                <img style="width: 50%;" src="../components/assets/java.png" alt="">
+                <br>
+                <h4 style="font-weight: bolder; color: cornflowerblue   ;">Curso Java</h4>
+            </div>
+            <div class="col-3" style="margin-top: 3.7%;">
+                <div class="row text-center">
+                    <div style="padding-left: 50px;" class="col-4"><button
+                            style="background-color: #00413B; color: white; border-style: none; width: 100%; border-radius: 10px;font-weight: bolder;"
+                            id="btnClick1">+</button></div>
+                    <div class="col-2 my-1">
+                        <p id="contarClick1"></p>
+                    </div>
+                    <div style="padding-right: 50px;" class="col-4"><button
+                            style="background-color: sienna; color: white; border-style: none; width: 100%; border-radius: 10px; font-weight: bolder;"
+                            id="btnClick2">-</button></div>
+                </div>
+            </div>
+            <div class="col-2 text-center mt-5">
+                <button class="" style="margin-left: 37%; margin-right: 37%; background: none; border-style: none;"><img
+                        style="width: 100%;" src="../components/assets/delete.png" alt=""></button>
+            </div>
+            <div class="col-3 text-center" style="margin-top: 3.7%;">
+                <div style=" margin-left: 37%; margin-right: 37%; background-color: burlywood; border-radius: 5px;">
+                    <h3 class="f fa-2x">$499</h3>
+                </div>
+            </div>
+            <br>
+        </div>
+    
+        <hr>
+    
+        <div class="row" style="display: flex; justify-content: center;">
+            <div class="col-2 text-center">
+                <img style="width: 50%;" src="../components/assets/piton.png" alt="">
+                <br>
+                <h4 style="font-weight: bolder; color: cornflowerblue ;">Curso Python</h4>
+            </div>
+            <div class="col-3" style="margin-top: 3.7%;">
+                <div class="row text-center">
+                    <div style="padding-left: 50px;" class=" col-4"><button
+                            style="background-color: #00413B; color: white; border-style: none; width: 100%; border-radius: 10px;font-weight: bolder;"
+                            id="btnClick01">+</button></div>
+                    <div class="col-2">
+                        <p id="contarClick2"></p>
+                    </div>
+                    <div style="padding-right: 50px;" class="col-4"><button
+                            style="background-color: sienna; color: white; border-style: none; width: 100%; border-radius: 10px; font-weight: bolder;"
+                            id="btnClick02">-</button></div>
+                </div>
+            </div>
+            <div class="col-2 text-center mt-5">
+                <button class="" style="margin-left: 37%; margin-right: 37%; background: none; border-style: none;"><img
+                        style="width: 100%;" src="../components/assets/delete.png" alt=""></button>
+            </div>
+            <div class="col-3 text-center" style="margin-top: 3.7%;">
+                <div style=" margin-left: 37%; margin-right: 37%; background-color: burlywood; border-radius: 5px;">
+                    <h3 class="fa-2x">$699</h3>
+                </div>
+            </div>
+            <br>
+        </div>
+    
+        <hr>
+        <br>
+    
+        <div class="row mb-2 d-flex justify-content-center " style="margin-left: -10%;">
+            <div class="col-8 text-center">
+                <h3 style="font-weight: bolder; color: darkslateblue;">Descuento</h3>
+                <h5>0%</h5>
+                <div class="row" style="display: flex; justify-content: center;">
+                    <div class="input-group w-50">
+                        <input type="text" placeholder="Ingresa el código de descuento" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                            <button class="input-group-text btn text-white" style="background: #00413B;">Aplicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 text-center">
+                <h3 style="font-weight: bolder; color: darkslateblue;">Total</h3>
+                <h5 style="margin-left: 45%; margin-right: 45%;">$1198</h5>
+                <button class="btn text-white" style="background: #266B66;" onclick="window.location.pathname = '/views/datosPago.html'">Comprar</button> 
+            </div>
+            <br>
+        </div>
+    </div>
+   
+
+    <footer class="text-center sticky-bottom">
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/productListAjs.js"></script>
+</body>
+<script>
+    var btnElm1 = document.getElementById('btnClick1'),
+        btnElm2 = document.getElementById('btnClick2'),
+        btnElm01 = document.getElementById('btnClick01'),
+        btnElm02 = document.getElementById('btnClick02'),
+        sum1 = document.getElementById('contarClick1'),
+        sum2 = document.getElementById('contarClick2')
+    contar = 0;
+    contar1 = 0
+    sum1.textContent = 0;
+    sum2.textContent = 0;
+
+    btnElm1.onclick = function () {
+        contar++;
+        sum1.textContent = contar;
+    }
+    btnElm2.onclick = function () {
+        contar--;
+        sum1.textContent = contar;
+    }
+
+    btnElm01.onclick = function () {
+        contar1++;
+        sum2.textContent = contar1;
+    }
+    btnElm02.onclick = function () {
+        contar1--;
+        sum2.textContent = contar1;
+    }
+</script>
+
+</html>

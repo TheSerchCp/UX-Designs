@@ -10,6 +10,29 @@ app.controller("inbox", ['$rootScope', '$scope', '$http', function ($rootScope, 
 
     $scope.listCard = [
         { title: "Microsoft Word", img: "/components/assets/tag.png", description: "Aprende a mejorar el diseño y orden tus documentos" },
+    ]
+
+    $scope.iconos = [
+        { title: "Microsoft Word", img: "/components/assets/icons8-mensajes-de-chat-32.png", description: "Mensajes nuevos" },
+        { title: "Microsoft Word", img: "/components/assets/icons8-inbox-64.png", description: "Inbox" },
+        { title: "Microsoft Word", img: "/components/assets/icons8-bandeja-de-salida-50.png", description: "Correos enviados" },
+        { title: "Microsoft Word", img: "/components/assets/icons8-estrella-50.png", description: "Favoritos" },
+        { title: "Microsoft Word", img: "/components/assets/icons8-draft-32.png", description: "Borradores" },
+        { title: "Microsoft Word", img: "/components/assets/icons8-eliminar-50.png", description: "Borrados" },
+    ]
+
+
+
+    $scope.listCards = [
+        { title: "Microsoft Word", img: "/components/assets/4.jpg", description: "Iniciativas para codigo", fecha: "10-11-2022 15:16" },
+
+    ]
+    $scope.listCards2 = [
+        { title: "Microsoft Word", img: "/components/assets/44.jpg", description: "Compresion", fecha: "10-11-2022 17:16" },
+
+    ]
+    $scope.listCards3 = [
+        { title: "Microsoft Word", img: "/components/assets/4.jpg", description: "El disco duro esta caido Habilita la conexion remota", fecha: "10-11-2022" },
 
     ]
 
@@ -20,7 +43,7 @@ app.controller("inbox", ['$rootScope', '$scope', '$http', function ($rootScope, 
         { title: "avatar", img: "/components/assets/58.jpg", name: "Emerson", mail: "Reporte Error HTTP" },
         { title: "avatar", img: "/components/assets/77.jpg", name: "Charile Culhane", mail: "Transmitiendo" },
         { title: "avatar", img: "/components/assets/87.jpg", name: "Charlie Siphron", mail: "Oferta negocio" },
-       
+
     ]
     console.log($scope.listCard)
     ///

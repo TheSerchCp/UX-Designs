@@ -8,7 +8,7 @@
     <title>Dashboard</title>
 
     <ng-include src="'/views/component/head.html'"></ng-include>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <!-- //// -->
 
@@ -20,12 +20,12 @@
 
 
     <!--BOTONES DEL DASHBOARD-->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2  ">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
+                <div class="d-flex flex-column align-items-center align-items-sm-start  pt-2  min-vh-100">
                     <ul
-                        class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
+                        class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0  align-items-sm-start ">
                         <div class="nav-item ">
                             <li class="box">
                                 <div class="ms-3 txt-dash d-flex flex-row justify-content-around ">
@@ -36,24 +36,26 @@
                                 </div>
                             </li>
                             <br>
-                            <li class="boxxd">
+                            <!-- <li class="boxxd">
                                 <div class="ms-3 txt-nrm d-flex flex-row justify-content-center">
                                     <p>Vista General</p>
                                     <div>
                                         <img src="../components/img/dashboard/eye.png" class="justify-content-end">
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                             <br>
                             <li class="boxxd">
                                 <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
-                                    <p>Chat</p>
-                                    <div>
-                                        <img src="../components/img/dashboard/devicemessage.png">
+                                    <a class="list-group-item d-flex" href="" onclick="window.location.pathname = '/views/inbox.html'">
+                                        <p class="m me-5">Inbox</p>
+                                    <div class="m ms-5">
+                                        <img class="ms-4" src="../components/img/dashboard/devicemessage.png">
                                     </div>
+                                    </a>
                                 </div>
                             </li>
-                            <br>
+                            <!-- <br>
                             <li class="boxxd">
                                 <div class="ms-3 txt-nrm d-flex flex-row justify-content-around">
                                     <p>Equipos</p>
@@ -61,7 +63,7 @@
                                         <img src="../components/img/dashboard/profile2user.png">
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                             <br>
                             <li>
                                 <div class="ms-2 me.auto ">

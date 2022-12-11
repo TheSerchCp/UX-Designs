@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ux">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de pago</title>
+    <ng-include src="'/views/component/head.html'"></ng-include>
+</head>
+<!-- //// -->
+
+<body ng-controller="productList">
+
+    <header class="sticky-top ">
+        <div ng-include src="'/views/component/navbar.html'"></div>
+    </header>
+<div class="container my-3">
+    <div class="row text-center ">
+        <div class="col-4" style="text-align: left; padding-left: 5%; padding-top: 2%;">
+            <div class="row">
+                <div class="col-6" onclick="window.location.pathname = '/views/comprasCursos.html'">
+                    <a href="#" class="list-group-item"><img style="width: 25%; float: left;" src="/components/assets/flecha-izquierda.png"
+                            alt="">
+                            <p style="padding: 4.7%; margin-left: 30%; font-size: 22px; font-weight: bold;">Regresar</p>
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4" style="padding-top: 2%; padding-bottom: 2%;">
+            <h1>Formas de Pago</h1>
+        </div>
+    </div>
+
+    <div class="row my-5" >
+        <h3 class="my-2" style="margin-left: 10%; font-weight: bolder;">Añadir tarjeta de débito o crédito</h3>
+        <div class="col-5 text-center mb-5">
+            <h5 style="margin-top: 3%;margin-right: 21%;">Metodo de pago:</h5>
+            <div class="row mb-4 " style="display: flex; justify-content: center;">
+                <div class="input-group w-50">
+                    <select class="custom-select form-select" id="inputGroupSelect02">
+                        <option selected>Tarjeta de crédito o débito</option>
+                        <option value="1">PayPal</option>
+                        <option value="2">Mercado Pago</option>
+                        <option value="3">OXXO</option>
+                    </select>
+                    <div class="input-group-append">
+                        <div style="width: 50px;background:#266B66;" class="input-group-text"><img style="width: 100%; "
+                                src="/components/assets/metodos-pago.png"></div>
+                    </div>
+                </div>
+            </div>
+            <h5 style="margin-right: 22%;">Nombre de tarjeta:</h5>
+            <div class="row mb-4" style="display: flex; justify-content: center;">
+                <div class="input-group w-50">
+                    <input type="text" placeholder="Ingresa el código de descuento" class="form-control"
+                        aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                        <div style="width: 50px;background:#266B66;" class="input-group-text"><img style="width: 100%; "
+                                src="/components/assets/usuario.png"></div>
+                    </div>
+                </div>
+            </div>
+            <h5 style="margin-right: 22%;">Número de tarjeta:</h5>
+            <div class="row mb-4 " style="display: flex; justify-content: center;">
+                <div class="input-group w-50">
+                    <input type="text" placeholder="**** **** **** ****" class="form-control"
+                        aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                        <div style="width: 50px;background:#266B66;" class="input-group-text" ><img style="width: 100%; "
+                                src="/components/assets/tarjeta-de-credito.png"></div>
+                    </div>
+                </div>
+            </div>
+            <h5 style="margin-right: 34%;">Vigencia:</h5>
+            <div class="row mb-4" style="display: flex; justify-content: center;">
+                <div style="width: 18%;" class="input-group">
+                    <select class="custom-select form-select" id="inputGroupSelect02">
+                        <option selected>MM</option>
+                        <option value="1">01</option>
+                        <option value="2">02 </option>
+                        <option value="3">...</option>
+                    </select>
+                </div>
+                <div style="width: 18%;" class="input-group">
+                    <select class="custom-select form-select" id="inputGroupSelect02">
+                        <option selected>AA</option>
+                        <option value="1">22</option>
+                        <option value="2">23</option>
+                        <option value="3">...</option>
+                    </select>
+                </div>
+                <div style="width: 16%;" class="input-group">
+                    <input type="text" placeholder="CVV" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-3 mb-5 text-start my-5">
+            <div class="row" style="width: 85%;"><img style="width: 100%;" src="/components/assets/cartel-de-pago.png"
+                    alt=""></div>
+        </div>
+        <div class="col-4 text-center my-5">
+            <div class="row d-flex justify-content-around" >
+                <div class="col-6 mb-4">
+                    <img style="width: 20%;" src="/components/assets/java.png" alt="">
+                    <h4 style="font-weight: bolder; color: cornflowerblue   ;">Curso Java</h4>
+                </div>
+                <div class="col-6 text-center" style="margin-top: 3.7%;">
+                    <h3>$499</h3>
+                </div>
+                <br>
+                <hr>
+            </div>
+            <div class="row d-flex justify-content-around" >
+                <div class="col-6  mb-4 ">
+                    <img style="width: 20%;" src="/components/assets/piton.png" alt="">
+                    <h4 style="font-weight: bolder; color: cornflowerblue;">Curso Python</h4>
+                </div>
+                <div class="col-6 text-center" style="margin-top: 3.7%;">
+                    <h3>$699</h3>
+                </div>
+                <br>
+                <hr>
+            </div>
+            <div class="col-12 d-flex text-center">
+                <h4 style="font-weight: bolder; color: darkslateblue;" class="col-md-6">Total a Pagar</h4>
+                <h5 class="col-md-2 align-items-center mt-1">$1198</h5>
+                <button class="btn  ms-4 text-white" style="background:#00413B;">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+   
+
+    <footer class="sticky-bottom">
+        <div ng-include src="'/views/component/footer.html'"></div>
+    </footer>
+
+
+    <script src="/components/popper.min.js"></script>
+    <script src="/components/bootstrap-5.2.3/bootstrap.min.js"></script>
+    <script src="/components/angularjs/angular-1.4.6.min.js"></script>
+    <script src="/components/angularjs/angular-route.js"></script>
+    <script src="/components/angularjs/angular-locale_es-mx.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/components/sweetalert/js/sweetalert2.min.js"></script>
+    <script src="/controller/productListAjs.js"></script>
+</body>
+
+</html>
