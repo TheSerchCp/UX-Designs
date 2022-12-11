@@ -1,0 +1,15 @@
+button {
+    background-color: #863C34;
+    color: #ffffff;
+    border-radius: 10%;
+    border: .01px solid #0000004e;
+    height: 35px;
+}
+
+button:hover{
+    background-color: #ab2618;
+}
+.card,img.img-product {
+    box-shadow: inset 0 0  0 .5px rgb(0, 0, 0),
+    0.3em 0.3em .5em rgba(0, 0, 0, 0.188);
+}
