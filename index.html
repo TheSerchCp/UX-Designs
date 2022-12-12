@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES | Inicio</title>
-    <ng-include src="'/views/component/head.html'"></ng-include>
+    <ng-include src="'window.location.hostname' + '/views/component/head.html'"></ng-include>
 </head>
 
 <body ng-controller="landing" class="bg-light">
     <header class="sticky-top ">
-        <div  ng-include src="'/views/component/navLanding.html'"></div>
+        <div  ng-include src="'window.location.hostname' +'/views/component/navLanding.html'"></div>
       </header>
 
     <!--Sidebar de red social-->
@@ -104,15 +104,14 @@
                         <div class="d-flex flex-column align-items-center ">
                             <ul class="nav nav-pills flex-row mb-4 mt-4 " >
                                 <li class="nav-item" >
-                                    <img src="/components/img/landing/Blender.jpg" class="rounded-circle img-fluid align-middle px-3" style="width:120px;height:95px;">
-                                    <span class="d-none d-sm-inline text-dark px-1">Blender</span>
+                                    <img src="'window.location.hostname' + '/components/img/landing/Blender.jpg'" class="rounded-circle img-fluid align-middle px-3" style="width:120px;height:95px;">                                    <span class="d-none d-sm-inline text-dark px-1">Blender</span>
                               </li>
                                 <li class="nav-item">
-                                <img src="/components/img/landing/mysql.jpg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:95px;">
+                                <img src="'window.location.hostname' + '/components/img/landing/mysql.jpg'" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:95px;">
                                 <span class="s-1 d-none d-sm-inline text-dark">MySQL</span>
                                 </li>
                                 <li class="nav-item">
-                                    <img src="/components/img/landing/OfficeWord.jpeg" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:95px;">
+                                    <img src="'window.location.hostname' + '/components/img/landing/OfficeWord.jpeg'" class="rounded-circle img-fluid align-middle px-3" style="width: 120px;height:95px;">
                                 <span class="s-1 d-none d-sm-inline text-dark">Ms Word</span>
                               
                                 </li>
