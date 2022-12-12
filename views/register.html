@@ -148,15 +148,20 @@
                               maxlength="12"
                               ng-required = "true"
                             />
-                            <label for="floatinginput" class="text-black-50" ng-hide="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty">Confirmar contraseña</label>
-                            <label ng-show="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty" class="form-label" for="floatinginput"
+                            <label for="floatinginput" class="text-black-50" ng-hide="form2.confirmPassword.$invalid && form2.confirmPassword.$dirty || password != confirmPassword">Confirmar contraseña</label>
+                            <label ng-show="form2.confirmPassword.$invalid || form2.confirmPassword.$dirty" ng-hide="confirmPassword != '' " class="form-label" for="floatinginput"
                             style="color:#F00073;">Llena el campo</label>
+                            <label ng-show="password != confirmPassword" ng-hide="password == '' && confirmPassword = '' || form2.confirmPassword.$invalid || form2.confirmPassword.$dirty" class="form-label" for="floatinginput"
+                            style="color:#F00073;">Contraseña no coincide</label>
                             <!-- <label class="form-label" for="form3Example4">Password</label> -->
                           </div>
-                          <button type="button" class="btn text-white" ng-click="step2()" style="background:#266B66;">Regresar</button>  
+                          <button type="button" 
+                          class="btn text-white col-md-4 col-sm-3 col-xl-3" 
+                          ng-click="step2()" 
+                          style="background:#266B66;">Regresar</button>  
                           <button
                           type="button"
-                          class="btn col-md-8 col-sm-8 col-xs-8 col-xl-8 text-white"
+                          class="btn col-md-7 col-sm-8 col-xs-8 col-xl-8 text-white"
                           style="padding-left: 2.5rem; padding-right: 2.5rem;background:#266B66;"
                          ng-disabled = "form2.$pristine || form2.$invalid"
                          onclick="window.location.pathname = '/views/productList.html'" >
@@ -166,7 +171,7 @@
                     </div>
                 </div>
                 
-                <div class="text-center">
+                <div class="text-center mt-2">
                   <button class=" btn text-body mb-4 " 
                   for="form2Example3" 
                   onclick="window.location.pathname = '/views/login.html'" 
