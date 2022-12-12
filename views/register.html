@@ -163,7 +163,7 @@
                           type="button"
                           class="btn col-md-7 col-sm-8 col-xs-8 col-xl-8 text-white"
                           style="padding-left: 2.5rem; padding-right: 2.5rem;background:#266B66;"
-                         ng-disabled = "form2.$pristine || form2.$invalid"
+                         ng-disabled = "form2.$pristine || form2.$invalid || password != confirmPassword"
                          onclick="window.location.pathname = '/views/productList.html'" >
                           Registrarse
                         </button>
