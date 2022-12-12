@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES | List</title>
+    <link rel="shortcut icon" href="/components/img/logo.png">
     <ng-include src="'/views/component/head.html'"></ng-include>
    
 </head>
@@ -21,7 +22,7 @@
     <!--Sidebar de red social-->
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 bg-light" >
+            <div class="col-4 col-md-3 col-xl-3 col-sm-3  bg-light" >
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2  min-vh-100">
                     <ul
                         class="nav nav-pills flex-column mb-auto mb-sm-auto mb-0 align-items-center align-items-sm-start ">
@@ -31,15 +32,15 @@
                                 <div class="text-start py-3">
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Eventos</span>
+                                        <span class="s-1 d-sm-inline text-dark">Eventos</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Orientado a Objetos</span>
+                                        <span class="s-1  d-sm-inline text-dark">Orientado a Objetos</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Frameworks</span>
+                                        <span class="s-1 d-sm-inline text-dark">Frameworks</span>
                                     </a>
                                 </div>
                             </div>
@@ -50,19 +51,19 @@
                                 <div class="text-start py-3">
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">MS Office</span>
+                                        <span class="s-1  d-sm-inline text-dark">MS Office</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">LibreOffice</span>
+                                        <span class="s-1  d-sm-inline text-dark">LibreOffice</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">WPS Office</span>
+                                        <span class="s-1  d-sm-inline text-dark">WPS Office</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Only Office</span>
+                                        <span class="s-1  d-sm-inline text-dark">Only Office</span>
                                     </a>
                                 </div>
                             </div>
@@ -73,15 +74,15 @@
                                 <div class="text-start py-3">
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Adobe Illustrator</span>
+                                        <span class="s-1  d-sm-inline text-dark">Adobe Illustrator</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Adobe Premier</span>
+                                        <span class="s-1 d-sm-inline text-dark">Adobe Premier</span>
                                     </a>
                                     <a class="nav-link align-middle px-0 py-1" href="#">
                                         <input type="checkbox" class="form-check-input">
-                                        <span class="s-1 d-none d-sm-inline text-dark">Gimp</span>
+                                        <span class="s-1 d-sm-inline text-dark">Gimp</span>
                                     </a>
                                 </div>
                             </div>
@@ -92,10 +93,10 @@
             <div class="col py-3" style="overflow:auto ;height:auto;">
                 <div class="row">
                     <!--Carrusel de cursos-->
-                    <div class="col-auto col-md-12 col-xl-12 bg-light ">
+                    <div class="col-auto col-md-12 col-xl-12 col-sm-12 bg-light ">
                         <div class="row justify-content-center pb-3">
-                            <div class="col-sm-4 col-md-4 col-lg-4 my-2" ng-repeat="products in listCard">
-                                <div class="card text-center h-100 text-white" style="width: 16rem;background: #863c34;">
+                            <div class="col-7 col-sm-5 col-md-4 col-lg-4 my-2 col" ng-repeat="products in listCard">
+                                <div class="card text-center h-100 text-white" style="width: 14rem;background: #863c34;">
                                     <img src="{{products.img}}"
                                         class="card-img-top rounded mx-auto d-block img-fluid w-100" alt="..."
                                         style="height: 150px;">

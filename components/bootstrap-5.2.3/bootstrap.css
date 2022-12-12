@@ -502,6 +502,10 @@ progress {
   }
 }
 
+.show{
+  display: block;
+}
+
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;

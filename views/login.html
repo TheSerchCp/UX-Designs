@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COURSES | Login</title>
+    <title>COURSES | Iniciar Sesión</title>
+    <link rel="shortcut icon" href="/components/img/logo.png">
     <ng-include src="'/views/component/head.html'"></ng-include>
   </head>
 
@@ -14,20 +15,19 @@
     </header>
     <section>
       <div class="container ">
-        <div class="row d-flex my-0">
-          <div class="col-md-12 rounded my-5" style="background: #80A09D;">
+        <div class="row d-flex my-0 justify-content-center">
+          <div class="col-md-12 col-xl-12 col-sm-12 rounded my-5 mx-1" style="background: #80A09D;">
             <div class="row">
-              <div class="col-md-6 col-lg-6 col-xl-6">
+              <div class="col-md-6 col-lg-6 col-xl-5 mx-1 my-4 d-md-block d-sm-none d-none">
                 <img
                   src="/components/img/logRegister/keyboard-typing-backward.jpg"
-                  class="img-fluid rounded"
-                  style="margin-left:-1rem ;"
+                  class="img-fluid rounded "
                   alt="Sample image"
                 />
               </div>
                    
-           <div class="col-md-12 col-lg-10 col-xl-4 offset-xl-1 py-5 px-5 mt-5 rounded" style="background: #80A09D;">
-                  <h1 id="register" class="fw-bold mb-5 text-center fa-2x">Login</h1>
+           <div class="col-md-6 col-lg-5 col-xl-6 px-5 col-12  py-4 mx-4 rounded " >
+                  <h1 id="register" class="fw-bold mb-5 text-center fa-2x mt-4">Login</h1>
                   <form name="form1" novalidate>
                     <!-- Email input -->
                     <div class="form-group form-floating mb-4"> 
@@ -74,16 +74,16 @@
                       style="color:#F00073;">Llena el campo</label>
                       <!-- <label class="form-label" for="form3Example4">Password</label> -->
                     </div>
-                    <div class="text-center mt-4 pt-2">
+                    <div class="text-center mt-4 ">
                       <button
                         type="button"
-                        class="btn btn-lg col-md-11 col-sm-11 col-xs-11 col-xl-11 text-white"
+                        class="btn btn-lg col-md-12 col-sm-12 col-xs-10 col-xl-12 col-12 text-white"
                         style="padding-left: 2.5rem; padding-right: 2.5rem;background:#266B66;"
                         ng-disabled="form1.$pristine || form1.$invalid"
                         onclick="window.location.pathname = '/views/productList.html'">
                         Iniciar Sesión
                       </button>
-                      <a class="text-body  btn mt-4" 
+                      <a class="text-body  btn col-md-6 col-sm-6 col-xs-2 col-xl-6 mt-2 col-6" 
                        onclick="window.location.pathname = '/views/register.html'" 
                        style="background:#00413B;color:#fff !important ;">
                         Registrarse
@@ -98,7 +98,7 @@
     </section>
       
 
-    <footer class="text-center sticky-bottom">
+    <footer class="text-center fixed-bottom">
       <div  ng-include src="'/views/component/footer.html'"></div>
     </footer>
 
