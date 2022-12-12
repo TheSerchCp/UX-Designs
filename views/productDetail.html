@@ -19,12 +19,12 @@
     <div ng-include src="'/views/component/navbar.html'"></div>
   </header>
 
-  <div class="container my-4">
-    <div class="row  text-center mt-4 mb-4">
+  <div class="container my-5">
+    <div class="row  text-center mt-2">
       <div class="col" style="padding: 1% 0%; margin-bottom: 8px;">
         <img src="{{product.img}}" class="mx-auto d-block img-product" />
       </div>
-      <div class="col" style="padding: 1%; margin-bottom: 8px;">
+      <div class="col my-4" style="padding: 1%; margin-bottom: 8px;">
         <div class="row">
           <div class="col-sm-6">
             <div class="card">
@@ -51,13 +51,13 @@
                   </div>
                   <div class="col">
                     <div class="row-2" style="float: right;">
-                      <button href="#" class="">Comprar</button>
+                      <button href="#" onclick="window.location.pathname = '/views/datosPago.html'" class="">Comprar</button>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-auto" style="margin-top: 10px;">
                   <div class="row-2" style="float: right;">
-                    <button href="#" class="">Agregar al carrito</button>
+                    <button href="#" onclick="window.location.pathname = '/views/carritoCompras.html'" class="">Agregar al carrito</button>
                   </div>
                 </div>
               </div>
